@@ -66,7 +66,7 @@ export const products: Product[] = [
         "price": 37900,
         "unit": "шт",
         "dimensions": "1500*510*520 (мм)",
-        "image": "/images/extracted/ulichnaya-skam-ya-qualita.png"
+        "image": "/images/4-3/ulichnaya-skam-ya-qualita.jpg"
     },
     {
         "id": "ulichnaya-skam-ya-orecchia",
@@ -75,7 +75,7 @@ export const products: Product[] = [
         "price": 44900,
         "unit": "шт",
         "dimensions": "2000*420*445 (мм)",
-        "image": "/images/extracted/ulichnaya-skam-ya-orecchia.png"
+        "image": "/images/4-3/ulichnaya-skam-ya-orecchia.jpg"
     },
     {
         "id": "ulichnaya-skam-ya-parentesi",
@@ -84,7 +84,7 @@ export const products: Product[] = [
         "price": 42900,
         "unit": "шт",
         "dimensions": "2000*420*445 (мм)",
-        "image": "/images/extracted/ulichnaya-skam-ya-parentesi.png"
+        "image": "/images/4-3/ulichnaya-skam-ya-parentesi.jpg"
     },
     {
         "id": "ulichnaya-skam-ya-siedevo",
@@ -93,7 +93,7 @@ export const products: Product[] = [
         "price": 49900,
         "unit": "шт",
         "dimensions": "1500*510*820 (мм)",
-        "image": "/images/extracted/ulichnaya-skam-ya-siedevo.png"
+        "image": "/images/4-3/ulichnaya-skam-ya-siedevo.jpg"
     },
     {
         "id": "ulichnaya-skam-ya-rentola",
@@ -102,7 +102,7 @@ export const products: Product[] = [
         "price": 59900,
         "unit": "шт",
         "dimensions": "2000*560*450 (мм)",
-        "image": "/images/extracted/ulichnaya-skam-ya-rentola.png"
+        "image": "/images/4-3/ulichnaya-skam-ya-rentola.jpg"
     },
     {
         "id": "ulichnaya-urna-vintage",
@@ -111,7 +111,7 @@ export const products: Product[] = [
         "price": 16900,
         "unit": "шт",
         "dimensions": "400*400*800 (мм)",
-        "image": "/images/extracted/ulichnaya-urna-vintage.png"
+        "image": "/images/4-3/ulichnaya-urna-vintage.jpg"
     },
     {
         "id": "ulichnaya-urna-slassica",
@@ -120,7 +120,7 @@ export const products: Product[] = [
         "price": 21300,
         "unit": "шт",
         "dimensions": "360*320*930 (мм)",
-        "image": "/images/extracted/ulichnaya-urna-slassica.png"
+        "image": "/images/4-3/ulichnaya-urna-slassica.jpg"
     },
     {
         "id": "ulichnaya-urna-mosaico",
@@ -129,7 +129,7 @@ export const products: Product[] = [
         "price": 18900,
         "unit": "шт",
         "dimensions": "400*400*930 (мм)",
-        "image": "/images/extracted/ulichnaya-urna-mosaico.png"
+        "image": "/images/4-3/ulichnaya-urna-mosaico.jpg"
     },
     {
         "id": "ulichnaya-urna-pixel",
@@ -138,7 +138,7 @@ export const products: Product[] = [
         "price": 12900,
         "unit": "шт",
         "dimensions": "380*380*750 (мм)",
-        "image": "/images/extracted/ulichnaya-urna-pixel.png"
+        "image": "/images/4-3/ulichnaya-urna-pixel.jpg"
     },
     {
         "id": "ulichnaya-urna-desiderio",
@@ -147,7 +147,7 @@ export const products: Product[] = [
         "price": 16900,
         "unit": "шт",
         "dimensions": "400*400*800 (мм)",
-        "image": "/images/extracted/ulichnaya-urna-desiderio.png"
+        "image": "/images/4-3/ulichnaya-urna-desiderio.jpg"
     },
     {
         "id": "ulichnaya-urna-rrevalenza",
@@ -156,7 +156,7 @@ export const products: Product[] = [
         "price": 17900,
         "unit": "шт",
         "dimensions": "350*500*800 (мм)",
-        "image": "/images/extracted/ulichnaya-urna-rrevalenza.png"
+        "image": "/images/4-3/ulichnaya-urna-rrevalenza.jpg"
     },
     {
         "id": "ulichnaya-urna-missile",
@@ -165,7 +165,7 @@ export const products: Product[] = [
         "price": 16900,
         "unit": "шт",
         "dimensions": "400*400*930 (мм)",
-        "image": "/images/extracted/ulichnaya-urna-missile.png"
+        "image": "/images/4-3/ulichnaya-urna-missile.jpg"
     },
     {
         "id": "ulichnaya-urna-incisione",
@@ -174,7 +174,7 @@ export const products: Product[] = [
         "price": 16900,
         "unit": "шт",
         "dimensions": "400*400*800 (мм)",
-        "image": "/images/extracted/ulichnaya-urna-incisione.png"
+        "image": "/images/4-3/ulichnaya-urna-incisione.jpg"
     },
     {
         "id": "ulichnaya-urna-ustione",
@@ -192,7 +192,7 @@ export const products: Product[] = [
         "price": 13900,
         "unit": "шт",
         "dimensions": "350*350*600 (мм)",
-        "image": "/images/extracted/vazon-miglio.png"
+        "image": "/images/4-3/vazon-miglio.jpeg"
     },
     {
         "id": "svetil-nik-ulichnyy-luminaire",
@@ -201,7 +201,7 @@ export const products: Product[] = [
         "price": 14900,
         "unit": "шт",
         "dimensions": "200*200*900 (мм)",
-        "image": "/images/extracted/svetil-nik-ulichnyy-luminaire.png"
+        "image": "/images/4-3/svetil-nik-ulichnyy-luminaire.jpg"
     },
     {
         "id": "svetil-nik-ulichnyy-disegno",
@@ -210,7 +210,7 @@ export const products: Product[] = [
         "price": 9900,
         "unit": "шт",
         "dimensions": "200*200*400 (мм)",
-        "image": "/images/extracted/svetil-nik-ulichnyy-disegno.png"
+        "image": "/images/4-3/svetil-nik-ulichnyy-disegno.jpg"
     },
     {
         "id": "svetil-nik-ulichnyy-traccia",
@@ -219,7 +219,7 @@ export const products: Product[] = [
         "price": 9900,
         "unit": "шт",
         "dimensions": "150*150*500 (мм)",
-        "image": "/images/extracted/svetil-nik-ulichnyy-traccia.png"
+        "image": "/images/4-3/svetil-nik-ulichnyy-traccia.jpg"
     },
     {
         "id": "svetil-nik-ulichnyy-braun",
@@ -228,7 +228,7 @@ export const products: Product[] = [
         "price": 9900,
         "unit": "шт",
         "dimensions": "250*200*500 (мм)",
-        "image": "/images/extracted/svetil-nik-ulichnyy-braun.png"
+        "image": "/images/4-3/svetil-nik-ulichnyy-braun.jpg"
     },
     {
         "id": "svetil-nik-ulichnyy-torre",
@@ -237,7 +237,7 @@ export const products: Product[] = [
         "price": 17900,
         "unit": "шт",
         "dimensions": "250*250*1500 (мм)",
-        "image": "/images/extracted/svetil-nik-ulichnyy-torre.png"
+        "image": "/images/4-3/svetil-nik-ulichnyy-torre.jpg"
     },
     {
         "id": "svetil-nik-ulichnyy-cubo",
@@ -246,7 +246,7 @@ export const products: Product[] = [
         "price": 9900,
         "unit": "шт",
         "dimensions": "200*200*500 (мм)",
-        "image": "/images/extracted/svetil-nik-ulichnyy-cubo.png"
+        "image": "/images/4-3/svetil-nik-ulichnyy-cubo.jpg"
     },
     {
         "id": "izdelie-bernoccolo",
@@ -255,7 +255,7 @@ export const products: Product[] = [
         "price": 59900,
         "unit": "шт",
         "dimensions": "1000*500*500 (мм)",
-        "image": "/images/extracted/izdelie-bernoccolo.png"
+        "image": "/images/4-3/izdelie-bernoccolo.jpg"
     },
     {
         "id": "inter-ernyy-shar-setaccio",
@@ -264,7 +264,7 @@ export const products: Product[] = [
         "price": 79900,
         "unit": "шт",
         "dimensions": "D 750 (мм)",
-        "image": "/images/extracted/inter-ernyy-shar-setaccio.png"
+        "image": "/images/4-3/inter-ernyy-shar-setaccio.jpg"
     },
     {
         "id": "lepestki-inter-ernye-rali",
@@ -273,7 +273,7 @@ export const products: Product[] = [
         "price": 17900,
         "unit": "шт",
         "dimensions": "300*4*(160-180) (мм)",
-        "image": "/images/extracted/lepestki-inter-ernye-rali.png"
+        "image": "/images/4-3/lepestki-inter-ernye-rali.jpg"
     },
     {
         "id": "ograzhdenie-zabor-campo",
@@ -282,7 +282,7 @@ export const products: Product[] = [
         "price": 12900,
         "unit": "шт",
         "dimensions": "500*3*850 (мм)",
-        "image": "/images/extracted/ograzhdenie-zabor-campo.png"
+        "image": "/images/4-3/ograzhdenie-zabor-campo.jpg"
     },
     {
         "id": "ograzhdenie-zabor-domino",
@@ -291,7 +291,7 @@ export const products: Product[] = [
         "price": 28900,
         "unit": "шт",
         "dimensions": "400*100*(140-160) (мм)",
-        "image": "/images/extracted/ograzhdenie-zabor-domino.png"
+        "image": "/images/4-3/ograzhdenie-zabor-domino.jpg"
     },
     {
         "id": "reznoy-zabor-natura",
@@ -300,7 +300,7 @@ export const products: Product[] = [
         "price": 19900,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
-        "image": "/images/extracted/reznoy-zabor-natura.png"
+        "image": "/images/4-3/reznoy-zabor-natura.jpg"
     },
     {
         "id": "reznoy-zabor-formaggio",
@@ -309,7 +309,7 @@ export const products: Product[] = [
         "price": 19900,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
-        "image": "/images/extracted/reznoy-zabor-formaggio.png"
+        "image": "/images/4-3/reznoy-zabor-formaggio.jpg"
     },
     {
         "id": "reznoy-zabor-inverno",
@@ -318,7 +318,7 @@ export const products: Product[] = [
         "price": 19900,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
-        "image": "/images/extracted/reznoy-zabor-inverno.png"
+        "image": "/images/4-3/reznoy-zabor-inverno.jpg"
     },
     {
         "id": "reznoy-zabor-albero",
@@ -327,7 +327,7 @@ export const products: Product[] = [
         "price": 19900,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
-        "image": "/images/extracted/reznoy-zabor-albero.png"
+        "image": "/images/4-3/reznoy-zabor-albero.jpg"
     },
     {
         "id": "reznoy-zabor-lacune",
@@ -336,7 +336,7 @@ export const products: Product[] = [
         "price": 19900,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
-        "image": "/images/extracted/reznoy-zabor-lacune.png"
+        "image": "/images/4-3/reznoy-zabor-lacune.jpg"
     },
     {
         "id": "reznoy-zabor-foresta",
@@ -345,7 +345,7 @@ export const products: Product[] = [
         "price": 19900,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
-        "image": "/images/extracted/reznoy-zabor-foresta.png"
+        "image": "/images/4-3/reznoy-zabor-foresta.jpg"
     },
     {
         "id": "reznoy-zabor-vene",
@@ -354,7 +354,7 @@ export const products: Product[] = [
         "price": 38900,
         "unit": "шт",
         "dimensions": "850*150*1500 (мм)",
-        "image": "/images/extracted/reznoy-zabor-vene.png"
+        "image": "/images/4-3/reznoy-zabor-vene.jpg"
     },
     {
         "id": "reznoy-zabor-foglie",
@@ -363,7 +363,7 @@ export const products: Product[] = [
         "price": 29900,
         "unit": "шт",
         "dimensions": "800*75*1250 (мм)",
-        "image": "/images/extracted/reznoy-zabor-foglie.png"
+        "image": "/images/4-3/reznoy-zabor-foglie.jpg"
     },
     {
         "id": "ochag-pear",
@@ -372,7 +372,7 @@ export const products: Product[] = [
         "price": 189000,
         "unit": "шт",
         "dimensions": "D850*1800 (мм)",
-        "image": "/images/extracted/ochag-pear.png"
+        "image": "/images/4-3/ochag-pear.jpg"
     },
     {
         "id": "kostrovaya-chasha-petali",
@@ -381,7 +381,7 @@ export const products: Product[] = [
         "price": 99000,
         "unit": "шт",
         "dimensions": "D1200*520 (мм)",
-        "image": "/images/extracted/kostrovaya-chasha-petali.png"
+        "image": "/images/4-3/kostrovaya-chasha-petali.jpg"
     },
     {
         "id": "ochag-premier",
@@ -390,7 +390,7 @@ export const products: Product[] = [
         "price": 349000,
         "unit": "шт",
         "dimensions": "D1500*500 (мм)",
-        "image": "/images/extracted/ochag-premier.png"
+        "image": "/images/4-3/ochag-premier.jpg"
     },
     {
         "id": "ochag-abisso",
@@ -399,7 +399,7 @@ export const products: Product[] = [
         "price": 349000,
         "unit": "шт",
         "dimensions": "D1500*400 (мм)",
-        "image": "/images/extracted/ochag-abisso.png"
+        "image": "/images/4-3/ochag-abisso.jpg"
     },
     {
         "id": "ochag-sfera-toskana",
@@ -408,7 +408,7 @@ export const products: Product[] = [
         "price": 119000,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
-        "image": "/images/extracted/ochag-sfera-toskana.png"
+        "image": "/images/4-3/ochag-sfera-toskana.jpg"
     },
     {
         "id": "ochag-sfera-zvezda-smerti",
@@ -417,7 +417,7 @@ export const products: Product[] = [
         "price": 119000,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
-        "image": "/images/extracted/ochag-sfera-zvezda-smerti.png"
+        "image": "/images/4-3/ochag-sfera-zvezda-smerti.jpg"
     },
     {
         "id": "ochag-sfera-zhar-ptitsa",
@@ -426,7 +426,7 @@ export const products: Product[] = [
         "price": 119000,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
-        "image": "/images/extracted/ochag-sfera-zhar-ptitsa.png"
+        "image": "/images/4-3/ochag-sfera-zhar-ptitsa.jpg"
     },
     {
         "id": "ochag-sfera-malen-kiy-prints",
@@ -435,7 +435,7 @@ export const products: Product[] = [
         "price": 119000,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
-        "image": "/images/extracted/ochag-sfera-malen-kiy-prints.png"
+        "image": "/images/4-3/ochag-sfera-malen-kiy-prints.jpg"
     },
     {
         "id": "ochag-sfera-ezhik-v-tumane",
@@ -444,7 +444,7 @@ export const products: Product[] = [
         "price": 119000,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
-        "image": "/images/extracted/ochag-sfera-ezhik-v-tumane.png"
+        "image": "/images/4-3/ochag-sfera-ezhik-v-tumane.jpg"
     },
     {
         "id": "ochag-sfera-tsvetok",
@@ -453,7 +453,7 @@ export const products: Product[] = [
         "price": 119000,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
-        "image": "/images/extracted/ochag-sfera-tsvetok.png"
+        "image": "/images/4-3/ochag-sfera-tsvetok.jpg"
     },
     {
         "id": "ochag-sfera-podvodnaya-mina",
@@ -462,7 +462,7 @@ export const products: Product[] = [
         "price": 169000,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
-        "image": "/images/extracted/ochag-sfera-podvodnaya-mina.png"
+        "image": "/images/4-3/ochag-sfera-podvodnaya-mina.jpg"
     },
     {
         "id": "ochag-sfera-serpy",
@@ -471,7 +471,7 @@ export const products: Product[] = [
         "price": 119000,
         "unit": "шт",
         "dimensions": "D950*1250 (мм)",
-        "image": "/images/extracted/ochag-sfera-serpy.png"
+        "image": "/images/4-3/ochag-sfera-serpy.jpg"
     },
     {
         "id": "ochag-cerchio",
@@ -480,7 +480,7 @@ export const products: Product[] = [
         "price": 189000,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
-        "image": "/images/extracted/ochag-cerchio.png"
+        "image": "/images/4-3/ochag-cerchio.jpg"
     },
     {
         "id": "ochag-minimo",
@@ -489,7 +489,7 @@ export const products: Product[] = [
         "price": 149000,
         "unit": "шт",
         "dimensions": "D850*480 (мм)",
-        "image": "/images/extracted/ochag-minimo.png"
+        "image": "/images/4-3/ochag-minimo.jpg"
     },
     {
         "id": "ochag-fiore",
@@ -498,7 +498,7 @@ export const products: Product[] = [
         "price": 89000,
         "unit": "шт",
         "dimensions": "D750*850 (мм)",
-        "image": "/images/extracted/ochag-fiore.png"
+        "image": "/images/4-3/ochag-fiore.jpg"
     },
     {
         "id": "ochag-convesso",
@@ -507,7 +507,7 @@ export const products: Product[] = [
         "price": 109000,
         "unit": "шт",
         "dimensions": "D1100*520 (мм)",
-        "image": "/images/extracted/ochag-convesso.png"
+        "image": "/images/4-3/ochag-convesso.jpg"
     },
     {
         "id": "ochag-ottagono",
@@ -516,7 +516,7 @@ export const products: Product[] = [
         "price": 199000,
         "unit": "шт",
         "dimensions": "1600*1600*500 (мм)",
-        "image": "/images/extracted/ochag-ottagono.png"
+        "image": "/images/4-3/ochag-ottagono.jpg"
     },
     {
         "id": "urn-liliya",
@@ -534,7 +534,7 @@ export const products: Product[] = [
         "price": 36750,
         "unit": "шт",
         "dimensions": "Вес: 102 кг",
-        "image": "/images/slides/slide_04.png"
+        "image": "/images/4-3/urn-shtof.jpg"
     },
     {
         "id": "bench-rakushka",
@@ -624,7 +624,7 @@ export const products: Product[] = [
         "price": 149000,
         "unit": "шт",
         "dimensions": "4280*2600*3000 (мм)",
-        "image": "/images/extracted/kachel-iz-breven-doppietto.png"
+        "image": "/images/4-3/kachel-iz-breven-doppietto.jpg"
     },
     {
         "id": "kachel-iz-breven-sezione",
@@ -633,7 +633,7 @@ export const products: Product[] = [
         "price": 189000,
         "unit": "шт",
         "dimensions": "4885*2020*2380 (мм)",
-        "image": "/images/extracted/kachel-iz-breven-sezione.png"
+        "image": "/images/4-3/kachel-iz-breven-sezione.jpg"
     },
     {
         "id": "kachel-equilibrio",
@@ -642,7 +642,7 @@ export const products: Product[] = [
         "price": 79900,
         "unit": "шт",
         "dimensions": "4000*740*740",
-        "image": "/images/extracted/kachel-equilibrio.png"
+        "image": "/images/4-3/kachel-equilibrio.jpg"
     },
     {
         "id": "kachel-iz-breven-sella",
@@ -651,7 +651,7 @@ export const products: Product[] = [
         "price": 189000,
         "unit": "шт",
         "dimensions": "4885*2020*2380 (мм)",
-        "image": "/images/extracted/kachel-iz-breven-sella.png"
+        "image": "/images/4-3/kachel-iz-breven-sella.jpg"
     },
     {
         "id": "kachel-iz-breven-rattuglia",
@@ -660,7 +660,7 @@ export const products: Product[] = [
         "price": 119000,
         "unit": "шт",
         "dimensions": "3500*200*1760 (мм)",
-        "image": "/images/extracted/kachel-iz-breven-rattuglia.png"
+        "image": "/images/4-3/kachel-iz-breven-rattuglia.jpg"
     },
     {
         "id": "kachel-vrezza",
@@ -669,7 +669,7 @@ export const products: Product[] = [
         "price": 129000,
         "unit": "шт",
         "dimensions": "2500*850*2500 (мм)",
-        "image": "/images/extracted/kachel-vrezza.png"
+        "image": "/images/4-3/kachel-vrezza.jpg"
     },
     {
         "id": "kachel-altare",
@@ -678,6 +678,6 @@ export const products: Product[] = [
         "price": 119000,
         "unit": "шт",
         "dimensions": "1800*850*2500 (мм)",
-        "image": "/images/extracted/kachel-altare.png"
+        "image": "/images/4-3/kachel-altare.jpg"
     }
 ];
