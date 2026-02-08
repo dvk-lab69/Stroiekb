@@ -183,7 +183,7 @@ export const products: Product[] = [
         "price": 11900,
         "unit": "шт",
         "dimensions": "380*380*750 (мм)",
-        "image": "/images/extracted/ulichnaya-urna-ustione.png"
+        "image": "/images/4-3/ulichnaya-urna-ustione.jpg"
     },
     {
         "id": "vazon-miglio",
@@ -518,15 +518,7 @@ export const products: Product[] = [
         "dimensions": "1600*1600*500 (мм)",
         "image": "/images/4-3/ochag-ottagono.jpg"
     },
-    {
-        "id": "urn-liliya",
-        "name": "Урна чугунная \"Лилия\"",
-        "category": "urns",
-        "price": 52500,
-        "unit": "шт",
-        "dimensions": "Вес: 102 кг",
-        "image": "/images/slides/slide_03.png"
-    },
+
     {
         "id": "urn-shtof",
         "name": "Урна чугунная \"Штоф\"",
@@ -543,7 +535,7 @@ export const products: Product[] = [
         "price": 73500,
         "unit": "шт",
         "dimensions": "Вес: 115 кг",
-        "image": "/images/slides/slide_05.png"
+        "image": "/images/4-3/bench-rakushka.jpg"
     },
     {
         "id": "bench-tyulpan",
@@ -552,7 +544,7 @@ export const products: Product[] = [
         "price": 47250,
         "unit": "шт",
         "dimensions": "Вес: 45 кг",
-        "image": "/images/slides/slide_06.png"
+        "image": "/images/4-3/bench-tyulpan.jpg"
     },
     {
         "id": "pillar-stolby",
@@ -561,7 +553,7 @@ export const products: Product[] = [
         "price": 31500,
         "unit": "шт",
         "dimensions": "",
-        "image": "/images/slides/slide_07.png"
+        "image": "/images/4-3/pillar-stolby.jpg"
     },
     {
         "id": "fence-perila",
@@ -570,7 +562,7 @@ export const products: Product[] = [
         "price": 12000,
         "unit": "шт",
         "dimensions": "Ажурные / Круги",
-        "image": "/images/slides/slide_08.png"
+        "image": "/images/4-3/fence-perila.jpg"
     },
     {
         "id": "tile-demidovskaya",
@@ -578,8 +570,8 @@ export const products: Product[] = [
         "category": "tiles",
         "price": 12000,
         "unit": "шт",
-        "dimensions": "",
-        "image": "/images/slides/slide_09.png"
+        "dimensions": "500*500*8 (мм)",
+        "image": "/images/4-3/tile-demidovskaya.jpg"
     },
     {
         "id": "tile-suzdal",
@@ -587,8 +579,8 @@ export const products: Product[] = [
         "category": "tiles",
         "price": 11400,
         "unit": "шт",
-        "dimensions": "",
-        "image": "/images/slides/slide_10.png"
+        "dimensions": "500*500*10 (мм)",
+        "image": "/images/4-3/tile-suzdal.jpg"
     },
     {
         "id": "grate-buton",
@@ -597,7 +589,7 @@ export const products: Product[] = [
         "price": 21100,
         "unit": "шт",
         "dimensions": "1000х1000 мм",
-        "image": "/images/slides/slide_11.png"
+        "image": "/images/4-3/grate-buton.jpg"
     },
     {
         "id": "grate-meridian",
@@ -606,7 +598,7 @@ export const products: Product[] = [
         "price": 31500,
         "unit": "шт",
         "dimensions": "1500х1500 мм",
-        "image": "/images/slides/slide_12.png"
+        "image": "/images/4-3/grate-meridian.jpg"
     },
     {
         "id": "grate-sirius",
@@ -615,7 +607,7 @@ export const products: Product[] = [
         "price": 39900,
         "unit": "шт",
         "dimensions": "1200х1200 мм",
-        "image": "/images/slides/slide_13.png"
+        "image": "/images/4-3/grate-sirius.jpg"
     },
     {
         "id": "kachel-iz-breven-doppietto",

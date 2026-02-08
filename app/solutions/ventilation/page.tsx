@@ -80,7 +80,7 @@ export default function VentilationPage() {
                                 Функциональность и эстетика в единой конструкции.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Link href="/contacts" className="btn-primary">
+                                <Link href="/request" className="btn-primary">
                                     <span>Заказать расчёт</span>
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
@@ -179,7 +179,7 @@ export default function VentilationPage() {
                                         {product.price}
                                     </span>
                                     <Link
-                                        href="/contacts"
+                                        href="/request"
                                         className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-primary transition-colors"
                                     >
                                         <span>Заказать</span>
@@ -192,7 +192,7 @@ export default function VentilationPage() {
 
                     {/* CTA */}
                     <div className="text-center mt-12">
-                        <Link href="/contacts" className="btn-primary">
+                        <Link href="/request" className="btn-primary">
                             <span>Обсудить проект</span>
                             <ArrowRight className="w-5 h-5" />
                         </Link>

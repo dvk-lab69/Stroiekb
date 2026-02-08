@@ -78,26 +78,40 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li>
                                 <a
-                                    href="mailto:info@urbanfurniture.ru"
+                                    href="mailto:m4Rk@yandex.ru"
                                     className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"
                                 >
                                     <Mail className="w-4 h-4" />
-                                    info@urbanfurniture.ru
+                                    m4Rk@yandex.ru
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="tel:+78001234567"
-                                    className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"
-                                >
-                                    <Phone className="w-4 h-4" />
-                                    8 (800) 123-45-67
-                                </a>
+                                <div className="flex flex-col gap-2">
+                                    <a
+                                        href="tel:+79122449003"
+                                        className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"
+                                    >
+                                        <Phone className="w-4 h-4" />
+                                        +7 (912) 244-90-03
+                                    </a>
+                                    <a
+                                        href="tel:+79122417373"
+                                        className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm pl-7"
+                                    >
+                                        +7 (912) 241-73-73
+                                    </a>
+                                    <a
+                                        href="tel:+79122487959"
+                                        className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm pl-7"
+                                    >
+                                        +7 (912) 248-79-59
+                                    </a>
+                                </div>
                             </li>
                             <li>
                                 <div className="flex items-start gap-3 text-white/80 text-sm">
                                     <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                                    <span>г. Екатеринбург, ул. Промышленная, 15</span>
+                                    <span>г. Екатеринбург, ул. Тверитина, 34А</span>
                                 </div>
                             </li>
                         </ul>

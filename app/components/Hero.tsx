@@ -41,7 +41,7 @@ export default function Hero() {
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Link href="/contacts" className="btn-primary">
+                        <Link href="/request" className="btn-primary">
                             <span>Получить расчет</span>
                             <ArrowRight className="w-5 h-5" />
                         </Link>
@@ -73,10 +73,7 @@ export default function Hero() {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400">
-                <span className="text-xs uppercase tracking-widest">Листайте вниз</span>
-                <ChevronDown className="w-5 h-5 animate-bounce" />
-            </div>
+
         </section>
     );
 }

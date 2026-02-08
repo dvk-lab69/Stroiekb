@@ -80,8 +80,8 @@ export default function PortfolioPage() {
             </section>
 
             {/* Stats */}
-            <section className="bg-white border-b border-gray-100">
-                <div className="container-custom py-8">
+            <section className="bg-white border-b border-gray-100 pt-12 pb-8">
+                <div className="container-custom">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         <div className="text-center">
                             <div className="text-4xl font-bold text-primary mb-1">500+</div>
@@ -164,7 +164,7 @@ export default function PortfolioPage() {
                         <p className="text-gray-600 mb-6">
                             Хотите стать частью нашего портфолио?
                         </p>
-                        <Link href="/contacts" className="btn-primary">
+                        <Link href="/request" className="btn-primary">
                             <span>Обсудить проект</span>
                             <ArrowRight className="w-5 h-5" />
                         </Link>

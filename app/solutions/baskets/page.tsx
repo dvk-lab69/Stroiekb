@@ -50,7 +50,7 @@ export default function BasketsPage() {
                                 Соответствие дизайн-коду и требованиям управляющих компаний.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Link href="/contacts" className="btn-primary">
+                                <Link href="/request" className="btn-primary">
                                     <span>Заказать расчёт</span>
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
@@ -139,7 +139,7 @@ export default function BasketsPage() {
 
                     {/* CTA */}
                     <div className="text-center mt-12">
-                        <Link href="/contacts" className="btn-primary">
+                        <Link href="/request" className="btn-primary">
                             <span>Получить расчёт</span>
                             <ArrowRight className="w-5 h-5" />
                         </Link>
