@@ -24,7 +24,7 @@ const productionSteps = [
         icon: Building2,
         step: "04",
         title: "Логистика",
-        description: "Доставка по всей России. Монтаж силами собственных бригад.",
+        description: "Доставка по всей России.",
     },
 ];
 

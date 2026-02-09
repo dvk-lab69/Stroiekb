@@ -10,7 +10,6 @@ export async function submitApplication(formData: FormData) {
         email: formData.get('email') as string,
         product_type: formData.get('product_type') as string,
         message: formData.get('message') as string,
-        file_url: formData.get('file_url') as string,
     };
 
     // Normalize phone format to 8XXXXXXXXXX
@@ -50,7 +49,6 @@ export async function submitApplication(formData: FormData) {
                     email: rawFormData.email,
                     product_type: rawFormData.product_type,
                     message: rawFormData.message,
-                    file_url: rawFormData.file_url,
                 },
             ]);
 

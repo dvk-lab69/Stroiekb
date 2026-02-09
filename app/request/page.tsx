@@ -1,63 +1,21 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2, Paperclip, X } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
 import { submitApplication } from "@/app/actions/submit-application";
 import { Loader2 } from "lucide-react";
 import Link from "next/link";
-import { supabase } from "@/lib/supabase";
 
 export default function RequestPage() {
     const [phone, setPhone] = useState("");
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [file, setFile] = useState<File | null>(null);
-    const [isUploading, setIsUploading] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
     const formRef = useRef<HTMLFormElement>(null);
 
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const selectedFile = e.target.files?.[0];
-        if (!selectedFile) return;
 
-        // Validate size (50MB)
-        if (selectedFile.size > 50 * 1024 * 1024) {
-            alert("Файл слишком большой. Максимальный размер: 50 МБ");
-            e.target.value = "";
-            return;
-        }
-
-        // Validate type
-        const allowedTypes = [
-            "application/msword", // .doc
-            "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx
-            "application/pdf", // .pdf
-            "application/vnd.ms-excel", // .xls
-            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", // .xlsx
-            "image/png", // .png
-            "image/jpeg", // .jpg, .jpeg
-            "application/vnd.ms-powerpoint", // .ppt
-            "application/vnd.openxmlformats-officedocument.presentationml.presentation", // .pptx
-        ];
-
-        // Also check by extension for backup as mime types can be tricky
-        const allowedExtensions = ["doc", "docx", "pdf", "xls", "xlsx", "png", "jpg", "jpeg", "ppt", "pptx"];
-        const extension = selectedFile.name.split(".").pop()?.toLowerCase();
-
-        if (!allowedTypes.includes(selectedFile.type) && !allowedExtensions.includes(extension || "")) {
-            alert("Недопустимый формат файла. Разрешены: docs, pdf, excel, png, jpg, pptx");
-            e.target.value = "";
-            return;
-        }
-
-        setFile(selectedFile);
-    };
-
-    const removeFile = () => {
-        setFile(null);
-        // Reset input value if needed via ref, but simpler to just clear state
-    };
 
     const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         let input = e.target.value.replace(/\D/g, ""); // Strip non-digits
@@ -103,6 +61,7 @@ export default function RequestPage() {
     };
 
     const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
         // Basic Client Validation
         if (!name || !phone || !email) {
             alert("Пожалуйста, заполните имя, телефон и email");
@@ -114,36 +73,6 @@ export default function RequestPage() {
         formData.set("phone", phone);
 
         try {
-            let fileUrl = "";
-
-            if (file) {
-                setIsUploading(true);
-                const fileExt = file.name.split(".").pop();
-                const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
-                const filePath = `uploads/${fileName}`;
-
-                const { error: uploadError } = await supabase.storage
-                    .from("applications")
-                    .upload(filePath, file);
-
-                if (uploadError) {
-                    console.error("Upload error:", uploadError);
-                    alert("Ошибка при загрузке файла. Попробуйте еще раз или отправьте без файла.");
-                    setIsUploading(false);
-                    return;
-                }
-
-                // Get public URL
-                const { data: { publicUrl } } = supabase.storage
-                    .from("applications")
-                    .getPublicUrl(filePath);
-
-                fileUrl = publicUrl;
-                setIsUploading(false);
-            }
-
-            formData.set("file_url", fileUrl);
-
             const result = await submitApplication(formData);
 
             if (!result.success) {
@@ -152,11 +81,14 @@ export default function RequestPage() {
             }
 
             // On success, the button will animate. We just clear the form.
+            // On success, the button will animate. We just clear the form.
             setPhone("");
             setName("");
             setEmail("");
-            setFile(null);
             formRef.current?.reset();
+
+            setIsSuccess(true);
+            setTimeout(() => setIsSuccess(false), 3000);
 
         } catch (error) {
             console.error("Submission error:", error);
@@ -349,64 +281,26 @@ export default function RequestPage() {
                                             placeholder="Опишите ваш проект, укажите примерные объёмы и сроки..."
                                         />
                                     </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                                            Прикрепить файл (до 50 МБ)
-                                        </label>
-                                        <div className="relative">
-                                            {!file ? (
-                                                <label className="flex items-center justify-center w-full border-2 border-dashed border-gray-300 rounded-lg p-6 hover:bg-gray-50 cursor-pointer transition-colors group">
-                                                    <div className="text-center">
-                                                        <Paperclip className="w-8 h-8 text-gray-400 mx-auto mb-2 group-hover:text-primary transition-colors" />
-                                                        <span className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">
-                                                            Нажмите для выбора файла
-                                                        </span>
-                                                        <p className="text-xs text-gray-400 mt-1">
-                                                            DOC, PDF, XLS, PNG, JPG, PPTX
-                                                        </p>
-                                                    </div>
-                                                    <input
-                                                        type="file"
-                                                        className="hidden"
-                                                        onChange={handleFileChange}
-                                                        accept=".doc,.docx,.pdf,.xls,.xlsx,.png,.jpg,.jpeg,.ppt,.pptx"
-                                                    />
-                                                </label>
-                                            ) : (
-                                                <div className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-3">
-                                                    <div className="flex items-center gap-3 overflow-hidden">
-                                                        <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                            <Paperclip className="w-4 h-4 text-primary" />
-                                                        </div>
-                                                        <span className="text-sm text-gray-700 truncate">
-                                                            {file.name}
-                                                        </span>
-                                                        <span className="text-xs text-gray-400 flex-shrink-0">
-                                                            {(file.size / 1024 / 1024).toFixed(2)} MB
-                                                        </span>
-                                                    </div>
-                                                    <button
-                                                        type="button"
-                                                        onClick={removeFile}
-                                                        className="text-gray-400 hover:text-red-500 transition-colors p-1"
-                                                    >
-                                                        <X className="w-5 h-5" />
-                                                    </button>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
+
                                     <div>
                                         <button
                                             type="submit"
-                                            disabled={isSubmitting}
-                                            className="w-full bg-primary hover:bg-primary/90 text-white font-medium rounded-lg px-6 py-4 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                            disabled={isSubmitting || isSuccess}
+                                            className={`w-full font-medium rounded-lg px-6 py-4 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 ${isSuccess
+                                                ? "bg-green-500 hover:bg-green-600 text-white"
+                                                : "bg-primary hover:bg-primary/90 text-white"
+                                                }`}
                                             onClick={handleSubmit}
                                         >
                                             {isSubmitting ? (
                                                 <>
                                                     <Loader2 className="w-5 h-5 animate-spin" />
-                                                    {isUploading ? "Загрузка файла..." : "Отправка..."}
+                                                    Отправка...
+                                                </>
+                                            ) : isSuccess ? (
+                                                <>
+                                                    Отправлено!
+                                                    <CheckCircle2 className="w-5 h-5" />
                                                 </>
                                             ) : (
                                                 <>
