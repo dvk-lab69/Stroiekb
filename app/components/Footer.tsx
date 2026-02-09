@@ -124,11 +124,8 @@ export default function Footer() {
                         © 2026 Urban Furniture. Все права защищены.
                     </p>
                     <div className="flex items-center gap-6">
-                        <Link href="#" className="text-white/60 hover:text-white text-sm transition-colors">
+                        <Link href="/privacy" className="text-white/60 hover:text-white text-sm transition-colors">
                             Политика конфиденциальности
-                        </Link>
-                        <Link href="#" className="text-white/60 hover:text-white text-sm transition-colors">
-                            Договор оферты
                         </Link>
                     </div>
                 </div>

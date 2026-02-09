@@ -1,5 +1,6 @@
 import { ArrowRight, Shield, Thermometer, Ruler, Palette, BadgeCheck } from "lucide-react";
 import Link from "next/link";
+import ImageCarousel from "@/app/components/ui/image-carousel";
 
 const features = [
     {
@@ -31,6 +32,16 @@ const models = [
     { name: "KB-04 (двойная)", size: "1600×800×400 мм", price: "от 9 500 ₽" },
 ];
 
+const basketExamples = [
+    { id: 1, imgUrl: "/images/gallery/basket-gallery-1.avif", alt: "Корзина на фасаде" },
+    { id: 2, imgUrl: "/images/gallery/basket-gallery-2.avif", alt: "Корзина белая" },
+    { id: 3, imgUrl: "/images/gallery/basket-gallery-3.avif", alt: "Двойная корзина" },
+    { id: 4, imgUrl: "/images/gallery/basket-gallery-4.avif", alt: "Корзина коричневая" },
+    { id: 5, imgUrl: "/images/gallery/basket-gallery-5.avif", alt: "Корзина на новостройке" },
+    { id: 6, imgUrl: "/images/gallery/basket-gallery-6.avif", alt: "Монтаж корзины" },
+    { id: 7, imgUrl: "/images/gallery/basket-gallery-7.avif", alt: "Пример установки" },
+];
+
 export default function BasketsPage() {
     return (
         <div className="pt-20">
@@ -54,9 +65,9 @@ export default function BasketsPage() {
                                     <span>Заказать расчёт</span>
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
-                                <Link href="/portfolio" className="btn-secondary">
+                                <a href="#examples" className="btn-secondary">
                                     <span>Примеры работ</span>
-                                </Link>
+                                </a>
                             </div>
                         </div>
 
@@ -147,26 +158,24 @@ export default function BasketsPage() {
                 </div>
             </section>
 
-            {/* Certificates */}
-            <section className="section bg-white">
+            {/* Examples Gallery */}
+            <section id="examples" className="section bg-white scroll-mt-24">
                 <div className="container-custom">
-                    <div className="bg-emerald-50 rounded-3xl p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-8">
-                        <div className="w-20 h-20 bg-emerald-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                            <BadgeCheck className="w-10 h-10 text-white" />
-                        </div>
-                        <div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                                Гарантия качества
-                            </h3>
-                            <p className="text-gray-600">
-                                Все изделия сертифицированы и соответствуют требованиям ГОСТ.
-                                Гарантия на покрытие — 5 лет. Используем только качественные материалы
-                                и проверенные технологии.
-                            </p>
-                        </div>
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                            Примеры установки
+                        </h2>
+                        <p className="text-gray-600">
+                            Посмотрите, как наши корзины выглядят на фасадах зданий
+                        </p>
                     </div>
+
+                    <ImageCarousel data={basketExamples} cardsPerView={3} />
                 </div>
             </section>
+
+
         </div>
     );
 }
+

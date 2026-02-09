@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, Plus } from "lucide-react";
+import SchemaOrg from "../components/SchemaOrg";
 
 const faqItems = [
     {
@@ -70,95 +71,114 @@ const faqItems = [
     }
 ];
 
+// Flatten FAQ items for Schema.org
+const allFaqItems = faqItems.flatMap(category =>
+    category.items.map(item => ({
+        question: item.question,
+        answer: item.answer
+    }))
+);
+
 export default function ContactsPage() {
     const [openCategory, setOpenCategory] = useState<string | null>("Производство и сроки");
     const [openQuestion, setOpenQuestion] = useState<string | null>(null);
 
     return (
-        <div className="pt-20">
-            {/* Header */}
-            <section className="section bg-transparent pb-8">
-                <div className="container-custom">
-                    <div className="max-w-3xl">
-                        <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
-                            FAQ
-                        </span>
-                        <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                            Частые <span className="gradient-text">вопросы</span>
-                        </h1>
-                        <p className="text-xl text-gray-600">
-                            Все, что вы хотели знать о производстве, доставке и сотрудничестве с Urban Furniture.
-                        </p>
-                    </div>
-                </div>
-            </section>
+        <>
+            {/* FAQ Schema.org markup */}
+            <SchemaOrg type="faq" faqItems={allFaqItems} />
 
-            {/* FAQ Sections */}
-            <section className="section bg-white pt-8">
-                <div className="container-custom">
-                    <div className="grid lg:grid-cols-12 gap-12">
-                        {/* Sidebar Categories */}
-                        <div className="lg:col-span-3 space-y-2 sticky top-32 h-fit">
-                            {faqItems.map((section, idx) => (
-                                <button
-                                    key={idx}
-                                    onClick={() => setOpenCategory(section.category)}
-                                    className={`w-full text-left px-5 py-4 rounded-xl transition-all font-medium flex items-center justify-between ${openCategory === section.category
-                                            ? "bg-primary text-white shadow-lg shadow-primary/20"
-                                            : "bg-gray-50 text-gray-600 hover:bg-gray-100"
-                                        }`}
-                                >
-                                    <span>{section.category}</span>
-                                    {openCategory === section.category && <ChevronDown className="w-4 h-4" />}
-                                </button>
-                            ))}
+            <div className="pt-20">
+                {/* Header */}
+                <section className="section bg-transparent pb-8">
+                    <div className="container-custom">
+                        <div className="max-w-3xl">
+                            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
+                                FAQ
+                            </span>
+                            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                                Частые <span className="gradient-text">вопросы</span>
+                            </h1>
+                            <p className="text-xl text-gray-600">
+                                Все, что вы хотели знать о производстве, доставке и сотрудничестве с Urban Furniture.
+                            </p>
                         </div>
+                    </div>
+                </section>
 
-                        {/* Questions List */}
-                        <div className="lg:col-span-9">
-                            {faqItems.map((section) => (
-                                <div
-                                    key={section.category}
-                                    className={`space-y-4 ${openCategory === section.category ? "block" : "hidden"}`}
-                                >
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                        {section.category}
-                                    </h2>
-
-                                    {section.items.map((item, qIdx) => (
-                                        <div
-                                            key={qIdx}
-                                            className="bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gray-100"
-                                        >
+                {/* FAQ Sections */}
+                <section className="section bg-white pt-8">
+                    <div className="container-custom">
+                        <div className="grid lg:grid-cols-12 gap-12">
+                            {/* Sidebar Categories */}
+                            <div className="lg:col-span-4">
+                                <div className="bg-gray-50 rounded-2xl p-6 sticky top-24">
+                                    <h2 className="font-bold text-gray-900 mb-4">Категории</h2>
+                                    <div className="space-y-2">
+                                        {faqItems.map((category, idx) => (
                                             <button
-                                                onClick={() => setOpenQuestion(openQuestion === item.question ? null : item.question)}
-                                                className="w-full flex items-start justify-between p-6 text-left"
+                                                key={idx}
+                                                onClick={() => {
+                                                    setOpenCategory(category.category);
+                                                    setOpenQuestion(null);
+                                                }}
+                                                className={`w-full text-left px-4 py-3 rounded-lg transition-all ${openCategory === category.category
+                                                        ? "bg-primary text-white"
+                                                        : "text-gray-600 hover:bg-gray-100"
+                                                    }`}
                                             >
-                                                <span className="font-semibold text-lg text-gray-900 pr-8">
-                                                    {item.question}
-                                                </span>
-                                                <span className={`w-8 h-8 rounded-full bg-white flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${openQuestion === item.question ? "rotate-45 bg-primary text-white" : "text-gray-400"
-                                                    }`}>
-                                                    <Plus className="w-5 h-5" />
-                                                </span>
+                                                {category.category}
                                             </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
 
-                                            <div className={`grid transition-all duration-300 ${openQuestion === item.question ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                                                }`}>
-                                                <div className="overflow-hidden">
-                                                    <div className="px-6 pb-6 text-gray-600 leading-relaxed text-base">
-                                                        {item.answer}
-                                                    </div>
+                            {/* FAQ List */}
+                            <div className="lg:col-span-8">
+                                {faqItems
+                                    .filter(cat => cat.category === openCategory)
+                                    .map((category, catIdx) => (
+                                        <div key={catIdx} className="space-y-4">
+                                            {category.items.map((item, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className="bg-gray-50 rounded-2xl overflow-hidden"
+                                                >
+                                                    <button
+                                                        onClick={() =>
+                                                            setOpenQuestion(
+                                                                openQuestion === item.question ? null : item.question
+                                                            )
+                                                        }
+                                                        className="w-full flex items-center justify-between p-6 text-left"
+                                                    >
+                                                        <span className="font-semibold text-gray-900 pr-4">
+                                                            {item.question}
+                                                        </span>
+                                                        <div
+                                                            className={`flex-shrink-0 w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center transition-transform ${openQuestion === item.question ? "rotate-45" : ""
+                                                                }`}
+                                                        >
+                                                            <Plus className="w-4 h-4 text-primary" />
+                                                        </div>
+                                                    </button>
+                                                    {openQuestion === item.question && (
+                                                        <div className="px-6 pb-6">
+                                                            <p className="text-gray-600 leading-relaxed">
+                                                                {item.answer}
+                                                            </p>
+                                                        </div>
+                                                    )}
                                                 </div>
-                                            </div>
+                                            ))}
                                         </div>
                                     ))}
-                                </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        </>
     );
 }

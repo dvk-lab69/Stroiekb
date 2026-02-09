@@ -1,13 +1,63 @@
 "use client";
 
-import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { useRef, useState } from "react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, Paperclip, X } from "lucide-react";
 import { submitApplication } from "@/app/actions/submit-application";
+import { Loader2 } from "lucide-react";
+import Link from "next/link";
+import { supabase } from "@/lib/supabase";
 
 export default function RequestPage() {
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
     const [phone, setPhone] = useState("");
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [file, setFile] = useState<File | null>(null);
+    const [isUploading, setIsUploading] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const formRef = useRef<HTMLFormElement>(null);
+
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const selectedFile = e.target.files?.[0];
+        if (!selectedFile) return;
+
+        // Validate size (50MB)
+        if (selectedFile.size > 50 * 1024 * 1024) {
+            alert("Файл слишком большой. Максимальный размер: 50 МБ");
+            e.target.value = "";
+            return;
+        }
+
+        // Validate type
+        const allowedTypes = [
+            "application/msword", // .doc
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx
+            "application/pdf", // .pdf
+            "application/vnd.ms-excel", // .xls
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", // .xlsx
+            "image/png", // .png
+            "image/jpeg", // .jpg, .jpeg
+            "application/vnd.ms-powerpoint", // .ppt
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation", // .pptx
+        ];
+
+        // Also check by extension for backup as mime types can be tricky
+        const allowedExtensions = ["doc", "docx", "pdf", "xls", "xlsx", "png", "jpg", "jpeg", "ppt", "pptx"];
+        const extension = selectedFile.name.split(".").pop()?.toLowerCase();
+
+        if (!allowedTypes.includes(selectedFile.type) && !allowedExtensions.includes(extension || "")) {
+            alert("Недопустимый формат файла. Разрешены: docs, pdf, excel, png, jpg, pptx");
+            e.target.value = "";
+            return;
+        }
+
+        setFile(selectedFile);
+    };
+
+    const removeFile = () => {
+        setFile(null);
+        // Reset input value if needed via ref, but simpler to just clear state
+    };
 
     const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         let input = e.target.value.replace(/\D/g, ""); // Strip non-digits
@@ -50,6 +100,68 @@ export default function RequestPage() {
         }
 
         setPhone(formatted);
+    };
+
+    const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+        // Basic Client Validation
+        if (!name || !phone || !email) {
+            alert("Пожалуйста, заполните имя, телефон и email");
+            throw new Error("Validation failed");
+        }
+
+        const formData = new FormData(formRef.current!);
+        formData.set("name", name);
+        formData.set("phone", phone);
+
+        try {
+            let fileUrl = "";
+
+            if (file) {
+                setIsUploading(true);
+                const fileExt = file.name.split(".").pop();
+                const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
+                const filePath = `uploads/${fileName}`;
+
+                const { error: uploadError } = await supabase.storage
+                    .from("applications")
+                    .upload(filePath, file);
+
+                if (uploadError) {
+                    console.error("Upload error:", uploadError);
+                    alert("Ошибка при загрузке файла. Попробуйте еще раз или отправьте без файла.");
+                    setIsUploading(false);
+                    return;
+                }
+
+                // Get public URL
+                const { data: { publicUrl } } = supabase.storage
+                    .from("applications")
+                    .getPublicUrl(filePath);
+
+                fileUrl = publicUrl;
+                setIsUploading(false);
+            }
+
+            formData.set("file_url", fileUrl);
+
+            const result = await submitApplication(formData);
+
+            if (!result.success) {
+                alert(result.message);
+                throw new Error(result.message);
+            }
+
+            // On success, the button will animate. We just clear the form.
+            setPhone("");
+            setName("");
+            setEmail("");
+            setFile(null);
+            formRef.current?.reset();
+
+        } catch (error) {
+            console.error("Submission error:", error);
+            throw error; // Re-throw to stop button success animation
+        }
     };
 
     return (
@@ -150,116 +262,167 @@ export default function RequestPage() {
                             </h2>
 
                             <div className="bg-gray-50 rounded-3xl p-8 lg:p-10">
-                                {isSubmitted ? (
-                                    <div className="text-center py-12">
-                                        <CheckCircle2 className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
-                                        <h3 className="text-2xl font-bold text-gray-900 mb-2">Заявка отправлена!</h3>
-                                        <p className="text-gray-600">Мы свяжемся с вами в ближайшее время</p>
-                                    </div>
-                                ) : (
-                                    <form action={async (formData) => {
-                                        setIsLoading(true);
-                                        const result = await submitApplication(formData);
-                                        setIsLoading(false);
-                                        if (result.success) {
-                                            setIsSubmitted(true);
-                                            setPhone(""); // Reset phone after success
-                                            setTimeout(() => setIsSubmitted(false), 5000);
-                                        } else {
-                                            alert(result.message);
-                                        }
-                                    }} className="space-y-5">
-                                        <div className="grid md:grid-cols-2 gap-5">
-                                            <div>
-                                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                    Ваше имя *
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    name="name"
-                                                    required
-                                                    className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
-                                                    placeholder="Иван Иванов"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                    Компания
-                                                </label>
-                                                <input
-                                                    type="text"
-                                                    name="company"
-                                                    className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
-                                                    placeholder="ООО «Название»"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="grid md:grid-cols-2 gap-5">
-                                            <div>
-                                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                    Телефон *
-                                                </label>
-                                                <input
-                                                    type="tel"
-                                                    name="phone"
-                                                    required
-                                                    value={phone}
-                                                    onChange={handlePhoneChange}
-                                                    className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
-                                                    placeholder="+7 (999) 000-00-00"
-                                                />
-                                            </div>
-                                            <div>
-                                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                    Email
-                                                </label>
-                                                <input
-                                                    type="email"
-                                                    name="email"
-                                                    className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
-                                                    placeholder="email@company.ru"
-                                                />
-                                            </div>
-                                        </div>
+                                <form
+                                    ref={formRef}
+                                    className="space-y-5"
+                                >
+                                    <div className="grid md:grid-cols-2 gap-5">
                                         <div>
                                             <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Тип продукции
+                                                Ваше имя *
                                             </label>
-                                            <select
-                                                name="product_type"
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                required
+                                                value={name}
+                                                onChange={(e) => setName(e.target.value)}
                                                 className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
-                                            >
-                                                <option value="">Выберите категорию</option>
-                                                <option value="maf">Малые архитектурные формы</option>
-                                                <option value="baskets">Корзины для кондиционеров</option>
-                                                <option value="ventilation">Вентиляционные системы</option>
-                                                <option value="other">Другое</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Сообщение
-                                            </label>
-                                            <textarea
-                                                name="message"
-                                                rows={4}
-                                                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none bg-white"
-                                                placeholder="Опишите ваш проект, укажите примерные объёмы и сроки..."
+                                                placeholder="Иван Иванов"
                                             />
                                         </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                                Компания
+                                            </label>
+                                            <input
+                                                type="text"
+                                                name="company"
+                                                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
+                                                placeholder="ООО «Название»"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="grid md:grid-cols-2 gap-5">
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                                Телефон *
+                                            </label>
+                                            <input
+                                                type="tel"
+                                                name="phone"
+                                                required
+                                                value={phone}
+                                                onChange={handlePhoneChange}
+                                                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
+                                                placeholder="+7 (999) 000-00-00"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                                Email *
+                                            </label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                required
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                                className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
+                                                placeholder="email@company.ru"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            Тип продукции
+                                        </label>
+                                        <select
+                                            name="product_type"
+                                            className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
+                                        >
+                                            <option value="">Выберите категорию</option>
+                                            <option value="maf">Малые архитектурные формы</option>
+                                            <option value="baskets">Корзины для кондиционеров</option>
+                                            <option value="ventilation">Вентиляционные системы</option>
+                                            <option value="other">Другое</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            Сообщение
+                                        </label>
+                                        <textarea
+                                            name="message"
+                                            rows={4}
+                                            className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none bg-white"
+                                            placeholder="Опишите ваш проект, укажите примерные объёмы и сроки..."
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            Прикрепить файл (до 50 МБ)
+                                        </label>
+                                        <div className="relative">
+                                            {!file ? (
+                                                <label className="flex items-center justify-center w-full border-2 border-dashed border-gray-300 rounded-lg p-6 hover:bg-gray-50 cursor-pointer transition-colors group">
+                                                    <div className="text-center">
+                                                        <Paperclip className="w-8 h-8 text-gray-400 mx-auto mb-2 group-hover:text-primary transition-colors" />
+                                                        <span className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">
+                                                            Нажмите для выбора файла
+                                                        </span>
+                                                        <p className="text-xs text-gray-400 mt-1">
+                                                            DOC, PDF, XLS, PNG, JPG, PPTX
+                                                        </p>
+                                                    </div>
+                                                    <input
+                                                        type="file"
+                                                        className="hidden"
+                                                        onChange={handleFileChange}
+                                                        accept=".doc,.docx,.pdf,.xls,.xlsx,.png,.jpg,.jpeg,.ppt,.pptx"
+                                                    />
+                                                </label>
+                                            ) : (
+                                                <div className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-3">
+                                                    <div className="flex items-center gap-3 overflow-hidden">
+                                                        <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                            <Paperclip className="w-4 h-4 text-primary" />
+                                                        </div>
+                                                        <span className="text-sm text-gray-700 truncate">
+                                                            {file.name}
+                                                        </span>
+                                                        <span className="text-xs text-gray-400 flex-shrink-0">
+                                                            {(file.size / 1024 / 1024).toFixed(2)} MB
+                                                        </span>
+                                                    </div>
+                                                    <button
+                                                        type="button"
+                                                        onClick={removeFile}
+                                                        className="text-gray-400 hover:text-red-500 transition-colors p-1"
+                                                    >
+                                                        <X className="w-5 h-5" />
+                                                    </button>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div>
                                         <button
                                             type="submit"
-                                            disabled={isLoading}
-                                            className="w-full btn-primary justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                                            disabled={isSubmitting}
+                                            className="w-full bg-primary hover:bg-primary/90 text-white font-medium rounded-lg px-6 py-4 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                            onClick={handleSubmit}
                                         >
-                                            <span>{isLoading ? 'Отправка...' : 'Отправить заявку'}</span>
-                                            <Send className="w-4 h-4" />
+                                            {isSubmitting ? (
+                                                <>
+                                                    <Loader2 className="w-5 h-5 animate-spin" />
+                                                    {isUploading ? "Загрузка файла..." : "Отправка..."}
+                                                </>
+                                            ) : (
+                                                <>
+                                                    Отправить заявку
+                                                    <Send className="w-5 h-5" />
+                                                </>
+                                            )}
                                         </button>
-                                        <p className="text-xs text-gray-500 text-center">
-                                            Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+                                        <p className="text-xs text-gray-400 mt-4 text-center">
+                                            Нажимая кнопку, вы соглашаетесь с{" "}
+                                            <Link href="/privacy" className="underline hover:text-gray-600">
+                                                политикой обработки персональных данных
+                                            </Link>
                                         </p>
-                                    </form>
-                                )}
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

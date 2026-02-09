@@ -59,8 +59,8 @@ export default function AboutPage() {
             {/* Mission Section */}
             <section className="section bg-white">
                 <div className="container-custom">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
+                    <div className="grid lg:grid-cols-2 gap-16">
+                        <div className="flex flex-col justify-center">
                             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                                 Наша миссия
                             </h2>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                                 с одной целью — создавать продукцию, которой можно гордиться.
                             </p>
                         </div>
-                        <div className="bg-primary rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+                        <div className="bg-primary rounded-3xl relative overflow-hidden h-full min-h-[400px] shadow-lg flex items-center justify-center text-center p-8">
                             <div className="absolute inset-0 opacity-20">
                                 <img
                                     src="/images/factory-interior.png"
@@ -84,22 +84,15 @@ export default function AboutPage() {
                             </div>
                             <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
 
-                            <div className="grid grid-cols-2 gap-6 relative z-10">
-                                <div className="text-center">
-                                    <div className="text-5xl font-bold text-white mb-2">12+</div>
-                                    <div className="text-white/80">лет опыта</div>
+                            <div className="relative z-10 text-white">
+                                <div className="mb-6 last:mb-0">
+                                    <div className="text-5xl lg:text-7xl font-bold mb-2">100%</div>
+                                    <div className="text-white/90 text-xl font-medium">локализация</div>
                                 </div>
-                                <div className="text-center">
-                                    <div className="text-5xl font-bold text-white mb-2">500+</div>
-                                    <div className="text-white/80">проектов</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-5xl font-bold text-white mb-2">50+</div>
-                                    <div className="text-white/80">городов</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-5xl font-bold text-white mb-2">3000</div>
-                                    <div className="text-white/80">м² производство</div>
+                                <div className="w-16 h-1 bg-white/20 mx-auto my-6 rounded-full" />
+                                <div>
+                                    <div className="text-3xl lg:text-4xl font-bold mb-2">Сделано</div>
+                                    <div className="text-white/90 text-xl font-medium">на Урале</div>
                                 </div>
                             </div>
                         </div>

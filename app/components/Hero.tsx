@@ -24,7 +24,7 @@ export default function Hero() {
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8">
                         <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                        Производственная компания полного цикла
+                        Комплексные решения для благоустройства
                     </div>
 
                     {/* Title */}
@@ -50,25 +50,7 @@ export default function Hero() {
                         </Link>
                     </div>
 
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-200">
-                        <div>
-                            <div className="text-4xl font-bold text-gray-900 mb-1">12+</div>
-                            <div className="text-gray-500 text-sm">лет на рынке</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-bold text-gray-900 mb-1">500+</div>
-                            <div className="text-gray-500 text-sm">реализованных проектов</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-bold text-gray-900 mb-1">50+</div>
-                            <div className="text-gray-500 text-sm">городов России</div>
-                        </div>
-                        <div>
-                            <div className="text-4xl font-bold text-primary mb-1">24/7</div>
-                            <div className="text-gray-500 text-sm">поддержка клиентов</div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
