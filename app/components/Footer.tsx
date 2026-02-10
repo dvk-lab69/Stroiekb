@@ -19,7 +19,7 @@ export default function Footer() {
 
 
             {/* Main Footer */}
-            <div className="container-custom !pt-14 !pb-8">
+            <div className="container-custom !pt-14 !pb-8 px-4 sm:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div>

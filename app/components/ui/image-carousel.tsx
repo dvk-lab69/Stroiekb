@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface CarouselItem {
@@ -16,14 +16,32 @@ interface ImageCarouselProps {
 const ImageCarousel = ({ data, cardsPerView = 3 }: ImageCarouselProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
+    const [itemsToShow, setItemsToShow] = useState(cardsPerView);
     const containerRef = useRef<HTMLDivElement>(null);
+
+    // Update itemsToShow based on screen width
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 768) {
+                setItemsToShow(1);
+            } else {
+                setItemsToShow(cardsPerView);
+            }
+        };
+
+        // Initial check
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [cardsPerView]);
 
     if (!data || data.length === 0) {
         return null;
     }
 
-    const cardWidth = 75 / cardsPerView;
-    const canNavigate = data.length > cardsPerView;
+    const cardWidth = 100 / itemsToShow;
+    const canNavigate = data.length > itemsToShow;
 
     const nextSlide = () => {
         if (isAnimating || !canNavigate) return;
@@ -71,7 +89,8 @@ const ImageCarousel = ({ data, cardsPerView = 3 }: ImageCarouselProps) => {
         const visibleCards = [];
         const totalCards = data.length;
 
-        for (let i = 0; i < cardsPerView + 1; i++) {
+        // We need itemsToShow + 1 cards for the sliding effect
+        for (let i = 0; i < itemsToShow + 1; i++) {
             const index = (currentIndex + i) % totalCards;
             visibleCards.push(data[index]);
         }
@@ -111,14 +130,15 @@ const ImageCarousel = ({ data, cardsPerView = 3 }: ImageCarouselProps) => {
                         className="flex"
                         style={{
                             transform: "translateX(0)",
-                            width: `${(cardsPerView + 1) * 100 / cardsPerView}%`
+                            // Width calculation: (itemsToShow + 1) * (100 / itemsToShow)%
+                            width: `${(itemsToShow + 1) * 100 / itemsToShow}%`
                         }}
                     >
                         {getVisibleCards().map((card, idx) => (
                             <div
                                 key={`card-${currentIndex}-${idx}`}
                                 style={{
-                                    width: `${100 / (cardsPerView + 1)}%`
+                                    width: `${100 / (itemsToShow + 1)}%`
                                 }}
                                 className="px-2"
                             >
