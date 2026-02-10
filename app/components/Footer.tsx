@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Building2 } from "lucide-react";
 const productLinks = [
     { href: "/catalog", label: "Для парков и скверов" },
     { href: "/catalog", label: "Для ЖК и дворов" },
-    { href: "/solutions/baskets", label: "Фасадные системы" },
+    { href: "/solutions/baskets", label: "Корзины для кондиционеров" },
 ];
 
 const companyLinks = [

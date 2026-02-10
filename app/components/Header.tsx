@@ -6,8 +6,8 @@ import { Menu, X, ArrowRight } from "lucide-react";
 
 const navLinks = [
     { href: "/catalog", label: "МАФ" },
-    { href: "/solutions/baskets", label: "Корзины" },
-    { href: "/solutions/ventilation", label: "Вентиляция" },
+    { href: "/solutions/baskets", label: "Корзины для кондиционеров" },
+    { href: "/solutions/ventilation", label: "Вентиляционное оборудование" },
     { href: "/about", label: "О нас" },
     { href: "/contacts", label: "FAQ" },
 ];
