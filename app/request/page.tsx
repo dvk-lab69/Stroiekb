@@ -3,7 +3,7 @@ import RequestClient from "./RequestClient";
 
 export const metadata: Metadata = {
     title: "Оставить заявку на расчет — StroiEkb",
-    description: "Закажите расчет стоимости МАФ, вентиляции или корзин для кондиционеров. Оперативный ответ в течение 15 минут.",
+    description: "Закажите расчет стоимости МАФ, вентиляции или корзин для кондиционеров. Оперативный ответ в течение часа.",
 };
 
 export default function RequestPage() {
