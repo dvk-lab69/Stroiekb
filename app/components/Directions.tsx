@@ -37,16 +37,10 @@ export default function Directions() {
                 {/* Section Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
                     <div>
-                        <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-2 block">
-                            Направления
-                        </span>
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
                             Наши направления
                         </h2>
                     </div>
-                    <p className="text-gray-600 lg:max-w-md">
-                        Комплексные решения для трансформации пространств, от парковых зон до жилых комплексов.
-                    </p>
                 </div>
 
                 {/* Cards Grid */}
