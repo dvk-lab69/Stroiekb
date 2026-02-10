@@ -28,7 +28,7 @@ export default function Hero() {
                     </div>
 
                     {/* Title */}
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6">
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6">
                         Благоустройство города{" "}
                         <span className="gradient-text">и решения для фасадов</span>
                     </h1>

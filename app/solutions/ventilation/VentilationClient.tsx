@@ -62,7 +62,7 @@ export default function VentilationClient() {
                             <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
                                 Профессиональные решения
                             </span>
-                            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
                                 Промышленная <span className="gradient-text">вентиляция</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -95,7 +95,7 @@ export default function VentilationClient() {
             <section className="section bg-white">
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             Преимущества
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -130,7 +130,7 @@ export default function VentilationClient() {
             <section className="section bg-gray-50/50" id="catalog">
                 <div className="container-custom">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             Каталог оборудования
                         </h2>
                         <p className="text-gray-600">
