@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Enable static exports for better SEO (SSG)
   // Uncomment for static export: output: "export",
+  output: "standalone",
 
   // Image optimization
   images: {

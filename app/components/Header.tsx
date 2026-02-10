@@ -8,7 +8,6 @@ const navLinks = [
     { href: "/catalog", label: "МАФ" },
     { href: "/solutions/baskets", label: "Корзины" },
     { href: "/solutions/ventilation", label: "Вентиляция" },
-    { href: "/portfolio", label: "Портфолио" },
     { href: "/about", label: "О нас" },
     { href: "/contacts", label: "FAQ" },
 ];
@@ -28,7 +27,7 @@ export default function Header() {
                             className="w-10 h-10 rounded-lg object-cover"
                         />
                         <span className="text-xl font-bold text-gray-900">
-                            Urban<span className="text-primary">Furniture</span>
+                            Stroi<span className="text-primary">Ekb</span>
                         </span>
                     </Link>
 

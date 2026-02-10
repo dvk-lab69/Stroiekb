@@ -5,12 +5,10 @@ const productLinks = [
     { href: "/catalog", label: "Для парков и скверов" },
     { href: "/catalog", label: "Для ЖК и дворов" },
     { href: "/solutions/baskets", label: "Фасадные системы" },
-    { href: "/portfolio", label: "Индивидуальные проекты" },
 ];
 
 const companyLinks = [
     { href: "/about", label: "О нас" },
-    { href: "/portfolio", label: "Портфолио" },
     { href: "/contacts", label: "FAQ" },
     { href: "/contacts", label: "Контакты" },
 ];
@@ -30,7 +28,7 @@ export default function Footer() {
                                 <Building2 className="w-5 h-5 text-white" />
                             </div>
                             <span className="text-xl font-bold">
-                                Urban<span className="text-primary">Furniture</span>
+                                Stroi<span className="text-primary">Ekb</span>
                             </span>
                         </Link>
                         <p className="text-white/80 text-sm leading-relaxed">
@@ -121,7 +119,7 @@ export default function Footer() {
                 {/* Bottom */}
                 <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-white/60 text-sm">
-                        © 2026 Urban Furniture. Все права защищены.
+                        © 2026 StroiEkb. Все права защищены.
                     </p>
                     <div className="flex items-center gap-6">
                         <Link href="/privacy" className="text-white/60 hover:text-white text-sm transition-colors">

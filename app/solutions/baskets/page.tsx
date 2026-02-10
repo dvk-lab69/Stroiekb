@@ -26,10 +26,10 @@ const features = [
 ];
 
 const models = [
-    { name: "KB-01", size: "800×600×300 мм", price: "от 4 500 ₽" },
-    { name: "KB-02", size: "1000×700×350 мм", price: "от 5 800 ₽" },
-    { name: "KB-03", size: "1200×800×400 мм", price: "от 7 200 ₽" },
-    { name: "KB-04 (двойная)", size: "1600×800×400 мм", price: "от 9 500 ₽" },
+    { name: "KB-01", size: "800×600×300 мм" },
+    { name: "KB-02", size: "1000×700×350 мм" },
+    { name: "KB-03", size: "1200×800×400 мм" },
+    { name: "KB-04 (двойная)", size: "1600×800×400 мм" },
 ];
 
 const basketExamples = [
@@ -41,6 +41,14 @@ const basketExamples = [
     { id: 6, imgUrl: "/images/gallery/basket-gallery-6.avif", alt: "Монтаж корзины" },
     { id: 7, imgUrl: "/images/gallery/basket-gallery-7.avif", alt: "Пример установки" },
 ];
+
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Корзины для кондиционеров на фасад — Купить в Екатеринбурге",
+    description: "Защитные корзины для наружных блоков кондиционеров. Любые размеры, покраска по RAL, защита от осадков и вандализма. Собственное производство.",
+};
 
 export default function BasketsPage() {
     return (
@@ -141,9 +149,7 @@ export default function BasketsPage() {
                                 <p className="text-gray-500 text-sm mb-4">
                                     {model.size}
                                 </p>
-                                <div className="text-2xl font-bold text-primary">
-                                    {model.price}
-                                </div>
+
                             </div>
                         ))}
                     </div>

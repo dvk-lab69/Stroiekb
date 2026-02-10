@@ -35,6 +35,14 @@ const certificates = [
     "Гарантия 5 лет",
 ];
 
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "О компании StroiEkb — Производство полного цикла",
+    description: "Узнайте больше о производстве StroiEkb. Собственное конструкторское бюро, современные станки и команда профессионалов в Екатеринбурге.",
+};
+
 export default function AboutPage() {
     return (
         <div className="pt-20">
@@ -92,7 +100,7 @@ export default function AboutPage() {
                                 <div className="w-16 h-1 bg-white/20 mx-auto my-6 rounded-full" />
                                 <div>
                                     <div className="text-3xl lg:text-4xl font-bold mb-2">Сделано</div>
-                                    <div className="text-white/90 text-xl font-medium">на Урале</div>
+                                    <div className="text-white/90 text-xl font-medium">в России</div>
                                 </div>
                             </div>
                         </div>
@@ -148,77 +156,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Factory & Certificates */}
-            <section className="section bg-white">
-                <div className="container-custom">
-                    <div className="grid lg:grid-cols-2 gap-16">
-                        {/* Factory */}
-                        <div>
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center">
-                                    <Factory className="w-7 h-7 text-white" />
-                                </div>
-                                <h2 className="text-3xl font-bold text-gray-900">Завод</h2>
-                            </div>
-                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                Собственное производство площадью 3000 м² в Екатеринбурге.
-                                Полный цикл изготовления — от проектирования до монтажа.
-                            </p>
-                            <ul className="space-y-3">
-                                <li className="flex items-center gap-3 text-gray-700">
-                                    <div className="w-2 h-2 bg-primary rounded-full" />
-                                    Современное оборудование с ЧПУ
-                                </li>
-                                <li className="flex items-center gap-3 text-gray-700">
-                                    <div className="w-2 h-2 bg-primary rounded-full" />
-                                    Собственная покрасочная камера
-                                </li>
-                                <li className="flex items-center gap-3 text-gray-700">
-                                    <div className="w-2 h-2 bg-primary rounded-full" />
-                                    Штат профессиональных сварщиков
-                                </li>
-                                <li className="flex items-center gap-3 text-gray-700">
-                                    <div className="w-2 h-2 bg-primary rounded-full" />
-                                    Контроль качества на каждом этапе
-                                </li>
-                            </ul>
-                        </div>
 
-                        {/* Certificates */}
-                        <div>
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="w-14 h-14 bg-emerald-500 rounded-xl flex items-center justify-center">
-                                    <BadgeCheck className="w-7 h-7 text-white" />
-                                </div>
-                                <h2 className="text-3xl font-bold text-gray-900">Сертифицированное качество</h2>
-                            </div>
-                            <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                Наша продукция соответствует всем необходимым стандартам и
-                                подтверждена сертификатами качества.
-                            </p>
-                            <div className="grid grid-cols-2 gap-4">
-                                {certificates.map((cert, index) => (
-                                    <div
-                                        key={index}
-                                        className="bg-transparent rounded-xl p-4 flex items-center gap-3"
-                                    >
-                                        <Award className="w-5 h-5 text-primary flex-shrink-0" />
-                                        <span className="text-sm font-medium text-gray-700">{cert}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* CTA */}
-                    <div className="mt-16 text-center">
-                        <Link href="/contacts" className="btn-primary">
-                            <span>Обсудить проект</span>
-                            <ArrowRight className="w-5 h-5" />
-                        </Link>
-                    </div>
-                </div>
-            </section>
         </div>
     );
 }

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "фасадные решения",
   ],
   authors: [{ name: "ИП Кольберг Марк" }],
-  creator: "Urban Furniture",
+  creator: "StroiEkb",
   publisher: "ИП Кольберг Марк",
   formatDetection: {
     email: false,
