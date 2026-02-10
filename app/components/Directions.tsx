@@ -76,17 +76,7 @@ export default function Directions() {
                             </p>
 
                             {/* Links */}
-                            <div className="flex flex-wrap gap-3 mb-8 relative z-10">
-                                {direction.links.map((link, linkIndex) => (
-                                    <Link
-                                        key={linkIndex}
-                                        href={link.href}
-                                        className="bg-white group-hover:bg-white/20 group-hover:text-white group-hover:backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:!bg-primary hover:!text-white hover:shadow-md transition-all border border-transparent group-hover:border-white/20"
-                                    >
-                                        {link.label}
-                                    </Link>
-                                ))}
-                            </div>
+
 
                             {/* CTA */}
                             <Link
