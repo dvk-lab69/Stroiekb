@@ -109,7 +109,7 @@ export default function RequestClient() {
                             Оставить <span className="gradient-text">заявку</span>
                         </h1>
                         <p className="text-xl text-gray-600">
-                            Ответим на ваши вопросы и подготовим коммерческое предложение в течение 15 минут.
+                            Ответим на ваши вопросы и подготовим коммерческое предложение в течение часа.
                         </p>
                     </div>
                 </div>
