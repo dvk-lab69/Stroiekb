@@ -523,7 +523,7 @@ export const products: Product[] = [
         "id": "urn-shtof",
         "name": "Урна чугунная \"Штоф\"",
         "category": "urns",
-        "price": 36750,
+        "price": 25725,
         "unit": "шт",
         "dimensions": "Вес: 102 кг",
         "image": "/images/4-3/urn-shtof.jpg"
@@ -532,7 +532,7 @@ export const products: Product[] = [
         "id": "bench-rakushka",
         "name": "Скамейка чугунная \"Ракушка\"",
         "category": "benches",
-        "price": 73500,
+        "price": 51450,
         "unit": "шт",
         "dimensions": "Вес: 115 кг",
         "image": "/images/4-3/bench-rakushka.jpg"
@@ -541,7 +541,7 @@ export const products: Product[] = [
         "id": "bench-tyulpan",
         "name": "Скамейка чугунная \"Тюльпан\"",
         "category": "benches",
-        "price": 47250,
+        "price": 33075,
         "unit": "шт",
         "dimensions": "Вес: 45 кг",
         "image": "/images/4-3/bench-tyulpan.jpg"
@@ -550,7 +550,7 @@ export const products: Product[] = [
         "id": "pillar-stolby",
         "name": "Столбик парковочный",
         "category": "fences",
-        "price": 31500,
+        "price": 22050,
         "unit": "шт",
         "dimensions": "",
         "image": "/images/4-3/pillar-stolby.jpg"
@@ -559,7 +559,7 @@ export const products: Product[] = [
         "id": "fence-perila",
         "name": "Ограждение (Перила)",
         "category": "fences",
-        "price": 12000,
+        "price": 8400,
         "unit": "шт",
         "dimensions": "Ажурные / Круги",
         "image": "/images/4-3/fence-perila.jpg"
@@ -568,7 +568,7 @@ export const products: Product[] = [
         "id": "tile-demidovskaya",
         "name": "Плитка чугунная \"Демидовская\"",
         "category": "tiles",
-        "price": 12000,
+        "price": 8400,
         "unit": "шт",
         "dimensions": "500*500*8 (мм)",
         "image": "/images/4-3/tile-demidovskaya.jpg"
@@ -577,7 +577,7 @@ export const products: Product[] = [
         "id": "tile-suzdal",
         "name": "Плитка чугунная \"Суздаль\"",
         "category": "tiles",
-        "price": 11400,
+        "price": 7980,
         "unit": "шт",
         "dimensions": "500*500*10 (мм)",
         "image": "/images/4-3/tile-suzdal.jpg"
@@ -586,7 +586,7 @@ export const products: Product[] = [
         "id": "grate-buton",
         "name": "Решётка приствольная \"Бутон\"",
         "category": "grates",
-        "price": 21100,
+        "price": 14770,
         "unit": "шт",
         "dimensions": "1000х1000 мм",
         "image": "/images/4-3/grate-buton.jpg"
@@ -595,7 +595,7 @@ export const products: Product[] = [
         "id": "grate-meridian",
         "name": "Решётка приствольная \"Меридиан\"",
         "category": "grates",
-        "price": 31500,
+        "price": 22050,
         "unit": "шт",
         "dimensions": "1500х1500 мм",
         "image": "/images/4-3/grate-meridian.jpg"
@@ -604,7 +604,7 @@ export const products: Product[] = [
         "id": "grate-sirius",
         "name": "Решётка приствольная \"Сириус\"",
         "category": "grates",
-        "price": 39900,
+        "price": 27930,
         "unit": "шт",
         "dimensions": "1200х1200 мм",
         "image": "/images/4-3/grate-sirius.jpg"
