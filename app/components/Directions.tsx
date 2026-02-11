@@ -79,13 +79,7 @@ export default function Directions() {
 
 
                             {/* CTA */}
-                            <Link
-                                href="/catalog"
-                                className={`inline-flex items-center gap-2 ${direction.accent} group-hover:text-white font-semibold group/link relative z-10`}
-                            >
-                                <span>Смотреть все</span>
-                                <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                            </Link>
+
                         </div>
                     ))}
                 </div>
