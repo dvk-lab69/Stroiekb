@@ -63,7 +63,7 @@ export const products: Product[] = [
         "id": "ulichnaya-skam-ya-qualita",
         "name": "Уличная скамья \"Qualita\"",
         "category": "benches",
-        "price": 37900,
+        "price": 26530,
         "unit": "шт",
         "dimensions": "1500*510*520 (мм)",
         "image": "/images/4-3/ulichnaya-skam-ya-qualita.jpg"
@@ -72,7 +72,7 @@ export const products: Product[] = [
         "id": "ulichnaya-skam-ya-orecchia",
         "name": "Уличная скамья \"Оrecchia\"",
         "category": "benches",
-        "price": 44900,
+        "price": 31430,
         "unit": "шт",
         "dimensions": "2000*420*445 (мм)",
         "image": "/images/4-3/ulichnaya-skam-ya-orecchia.jpg"
@@ -81,7 +81,7 @@ export const products: Product[] = [
         "id": "ulichnaya-skam-ya-parentesi",
         "name": "Уличная скамья \"Parentesi\"",
         "category": "benches",
-        "price": 42900,
+        "price": 30030,
         "unit": "шт",
         "dimensions": "2000*420*445 (мм)",
         "image": "/images/4-3/ulichnaya-skam-ya-parentesi.jpg"
@@ -90,7 +90,7 @@ export const products: Product[] = [
         "id": "ulichnaya-skam-ya-siedevo",
         "name": "Уличная скамья \"Siedevo\"",
         "category": "benches",
-        "price": 49900,
+        "price": 34930,
         "unit": "шт",
         "dimensions": "1500*510*820 (мм)",
         "image": "/images/4-3/ulichnaya-skam-ya-siedevo.jpg"
@@ -99,7 +99,7 @@ export const products: Product[] = [
         "id": "ulichnaya-skam-ya-rentola",
         "name": "Уличная скамья \"Рentolа\"",
         "category": "benches",
-        "price": 59900,
+        "price": 41930,
         "unit": "шт",
         "dimensions": "2000*560*450 (мм)",
         "image": "/images/4-3/ulichnaya-skam-ya-rentola.jpg"
@@ -108,7 +108,7 @@ export const products: Product[] = [
         "id": "ulichnaya-urna-vintage",
         "name": "Уличная урна \"Vintage\"",
         "category": "urns",
-        "price": 16900,
+        "price": 11830,
         "unit": "шт",
         "dimensions": "400*400*800 (мм)",
         "image": "/images/4-3/ulichnaya-urna-vintage.jpg"
@@ -117,7 +117,7 @@ export const products: Product[] = [
         "id": "ulichnaya-urna-slassica",
         "name": "Уличная урна \"Сlassica\"",
         "category": "urns",
-        "price": 21300,
+        "price": 14910,
         "unit": "шт",
         "dimensions": "360*320*930 (мм)",
         "image": "/images/4-3/ulichnaya-urna-slassica.jpg"
@@ -126,7 +126,7 @@ export const products: Product[] = [
         "id": "ulichnaya-urna-mosaico",
         "name": "Уличная урна \"Mosaico\"",
         "category": "urns",
-        "price": 18900,
+        "price": 13230,
         "unit": "шт",
         "dimensions": "400*400*930 (мм)",
         "image": "/images/4-3/ulichnaya-urna-mosaico.jpg"
@@ -135,7 +135,7 @@ export const products: Product[] = [
         "id": "ulichnaya-urna-pixel",
         "name": "Уличная урна \"Pixel\"",
         "category": "urns",
-        "price": 12900,
+        "price": 9030,
         "unit": "шт",
         "dimensions": "380*380*750 (мм)",
         "image": "/images/4-3/ulichnaya-urna-pixel.jpg"
@@ -144,7 +144,7 @@ export const products: Product[] = [
         "id": "ulichnaya-urna-desiderio",
         "name": "Уличная урна \"Desiderio\"",
         "category": "urns",
-        "price": 16900,
+        "price": 11830,
         "unit": "шт",
         "dimensions": "400*400*800 (мм)",
         "image": "/images/4-3/ulichnaya-urna-desiderio.jpg"
@@ -153,7 +153,7 @@ export const products: Product[] = [
         "id": "ulichnaya-urna-rrevalenza",
         "name": "Уличная урна \"Рrevalenza\"",
         "category": "urns",
-        "price": 17900,
+        "price": 12530,
         "unit": "шт",
         "dimensions": "350*500*800 (мм)",
         "image": "/images/4-3/ulichnaya-urna-rrevalenza.jpg"
@@ -162,7 +162,7 @@ export const products: Product[] = [
         "id": "ulichnaya-urna-missile",
         "name": "Уличная урна \"Мissile\"",
         "category": "urns",
-        "price": 16900,
+        "price": 11830,
         "unit": "шт",
         "dimensions": "400*400*930 (мм)",
         "image": "/images/4-3/ulichnaya-urna-missile.jpg"
@@ -171,7 +171,7 @@ export const products: Product[] = [
         "id": "ulichnaya-urna-incisione",
         "name": "Уличная урна \"Incisione\"",
         "category": "urns",
-        "price": 16900,
+        "price": 11830,
         "unit": "шт",
         "dimensions": "400*400*800 (мм)",
         "image": "/images/4-3/ulichnaya-urna-incisione.jpg"
@@ -180,7 +180,7 @@ export const products: Product[] = [
         "id": "ulichnaya-urna-ustione",
         "name": "Уличная урна \"Ustione\"",
         "category": "urns",
-        "price": 11900,
+        "price": 8330,
         "unit": "шт",
         "dimensions": "380*380*750 (мм)",
         "image": "/images/4-3/ulichnaya-urna-ustione.jpg"
@@ -189,7 +189,7 @@ export const products: Product[] = [
         "id": "vazon-miglio",
         "name": "Вазон \"Miglio\"",
         "category": "decor",
-        "price": 13900,
+        "price": 9730,
         "unit": "шт",
         "dimensions": "350*350*600 (мм)",
         "image": "/images/4-3/vazon-miglio.jpeg"
@@ -198,7 +198,7 @@ export const products: Product[] = [
         "id": "svetil-nik-ulichnyy-luminaire",
         "name": "Светильник уличный \"luminaire\"",
         "category": "lighting",
-        "price": 14900,
+        "price": 10430,
         "unit": "шт",
         "dimensions": "200*200*900 (мм)",
         "image": "/images/4-3/svetil-nik-ulichnyy-luminaire.jpg"
@@ -207,7 +207,7 @@ export const products: Product[] = [
         "id": "svetil-nik-ulichnyy-disegno",
         "name": "Светильник уличный \"Disegno\"",
         "category": "lighting",
-        "price": 9900,
+        "price": 6930,
         "unit": "шт",
         "dimensions": "200*200*400 (мм)",
         "image": "/images/4-3/svetil-nik-ulichnyy-disegno.jpg"
@@ -216,7 +216,7 @@ export const products: Product[] = [
         "id": "svetil-nik-ulichnyy-traccia",
         "name": "Светильник уличный \"Traccia\"",
         "category": "lighting",
-        "price": 9900,
+        "price": 6930,
         "unit": "шт",
         "dimensions": "150*150*500 (мм)",
         "image": "/images/4-3/svetil-nik-ulichnyy-traccia.jpg"
@@ -225,7 +225,7 @@ export const products: Product[] = [
         "id": "svetil-nik-ulichnyy-braun",
         "name": "Светильник уличный \"Braun\"",
         "category": "lighting",
-        "price": 9900,
+        "price": 6930,
         "unit": "шт",
         "dimensions": "250*200*500 (мм)",
         "image": "/images/4-3/svetil-nik-ulichnyy-braun.jpg"
@@ -234,7 +234,7 @@ export const products: Product[] = [
         "id": "svetil-nik-ulichnyy-torre",
         "name": "Светильник уличный \"Torre\"",
         "category": "lighting",
-        "price": 17900,
+        "price": 12530,
         "unit": "шт",
         "dimensions": "250*250*1500 (мм)",
         "image": "/images/4-3/svetil-nik-ulichnyy-torre.jpg"
@@ -243,7 +243,7 @@ export const products: Product[] = [
         "id": "svetil-nik-ulichnyy-cubo",
         "name": "Светильник уличный \"Cubo\"",
         "category": "lighting",
-        "price": 9900,
+        "price": 6930,
         "unit": "шт",
         "dimensions": "200*200*500 (мм)",
         "image": "/images/4-3/svetil-nik-ulichnyy-cubo.jpg"
@@ -252,7 +252,7 @@ export const products: Product[] = [
         "id": "izdelie-bernoccolo",
         "name": "Изделие \"Bernoccolo\"",
         "category": "decor",
-        "price": 59900,
+        "price": 41930,
         "unit": "шт",
         "dimensions": "1000*500*500 (мм)",
         "image": "/images/4-3/izdelie-bernoccolo.jpg"
@@ -261,7 +261,7 @@ export const products: Product[] = [
         "id": "inter-ernyy-shar-setaccio",
         "name": "Интерьерный шар \"Setaccio\"",
         "category": "decor",
-        "price": 79900,
+        "price": 55930,
         "unit": "шт",
         "dimensions": "D 750 (мм)",
         "image": "/images/4-3/inter-ernyy-shar-setaccio.jpg"
@@ -270,7 +270,7 @@ export const products: Product[] = [
         "id": "lepestki-inter-ernye-rali",
         "name": "Лепестки интерьерные \"Рali\"",
         "category": "decor",
-        "price": 17900,
+        "price": 12530,
         "unit": "шт",
         "dimensions": "300*4*(160-180) (мм)",
         "image": "/images/4-3/lepestki-inter-ernye-rali.jpg"
@@ -279,7 +279,7 @@ export const products: Product[] = [
         "id": "ograzhdenie-zabor-campo",
         "name": "Ограждение-забор \"Campo\"",
         "category": "fences",
-        "price": 12900,
+        "price": 9030,
         "unit": "шт",
         "dimensions": "500*3*850 (мм)",
         "image": "/images/4-3/ograzhdenie-zabor-campo.jpg"
@@ -288,7 +288,7 @@ export const products: Product[] = [
         "id": "ograzhdenie-zabor-domino",
         "name": "Ограждение-забор \"Domino\"",
         "category": "fences",
-        "price": 28900,
+        "price": 20230,
         "unit": "шт",
         "dimensions": "400*100*(140-160) (мм)",
         "image": "/images/4-3/ograzhdenie-zabor-domino.jpg"
@@ -297,7 +297,7 @@ export const products: Product[] = [
         "id": "reznoy-zabor-natura",
         "name": "Резной забор \"Natura\"",
         "category": "fences",
-        "price": 19900,
+        "price": 13930,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
         "image": "/images/4-3/reznoy-zabor-natura.jpg"
@@ -306,7 +306,7 @@ export const products: Product[] = [
         "id": "reznoy-zabor-formaggio",
         "name": "Резной забор \"Formaggio\"",
         "category": "fences",
-        "price": 19900,
+        "price": 13930,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
         "image": "/images/4-3/reznoy-zabor-formaggio.jpg"
@@ -315,7 +315,7 @@ export const products: Product[] = [
         "id": "reznoy-zabor-inverno",
         "name": "Резной забор \"Inverno\"",
         "category": "fences",
-        "price": 19900,
+        "price": 13930,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
         "image": "/images/4-3/reznoy-zabor-inverno.jpg"
@@ -324,7 +324,7 @@ export const products: Product[] = [
         "id": "reznoy-zabor-albero",
         "name": "Резной забор \"Albero\"",
         "category": "fences",
-        "price": 19900,
+        "price": 13930,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
         "image": "/images/4-3/reznoy-zabor-albero.jpg"
@@ -333,7 +333,7 @@ export const products: Product[] = [
         "id": "reznoy-zabor-lacune",
         "name": "Резной забор \"Lacune\"",
         "category": "fences",
-        "price": 19900,
+        "price": 13930,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
         "image": "/images/4-3/reznoy-zabor-lacune.jpg"
@@ -342,7 +342,7 @@ export const products: Product[] = [
         "id": "reznoy-zabor-foresta",
         "name": "Резной забор \"Foresta\"",
         "category": "fences",
-        "price": 19900,
+        "price": 13930,
         "unit": "шт",
         "dimensions": "1000*3*1000 (мм)",
         "image": "/images/4-3/reznoy-zabor-foresta.jpg"
@@ -351,7 +351,7 @@ export const products: Product[] = [
         "id": "reznoy-zabor-vene",
         "name": "Резной забор \"Vene\"",
         "category": "fences",
-        "price": 38900,
+        "price": 27230,
         "unit": "шт",
         "dimensions": "850*150*1500 (мм)",
         "image": "/images/4-3/reznoy-zabor-vene.jpg"
@@ -360,7 +360,7 @@ export const products: Product[] = [
         "id": "reznoy-zabor-foglie",
         "name": "Резной забор \"Foglie\"",
         "category": "fences",
-        "price": 29900,
+        "price": 20930,
         "unit": "шт",
         "dimensions": "800*75*1250 (мм)",
         "image": "/images/4-3/reznoy-zabor-foglie.jpg"
@@ -369,7 +369,7 @@ export const products: Product[] = [
         "id": "ochag-pear",
         "name": "Очаг \"Pear\"",
         "category": "fire_pits",
-        "price": 189000,
+        "price": 132300,
         "unit": "шт",
         "dimensions": "D850*1800 (мм)",
         "image": "/images/4-3/ochag-pear.jpg"
@@ -378,7 +378,7 @@ export const products: Product[] = [
         "id": "kostrovaya-chasha-petali",
         "name": "Костровая чаша \"Petali\"",
         "category": "fire_pits",
-        "price": 99000,
+        "price": 69300,
         "unit": "шт",
         "dimensions": "D1200*520 (мм)",
         "image": "/images/4-3/kostrovaya-chasha-petali.jpg"
@@ -387,7 +387,7 @@ export const products: Product[] = [
         "id": "ochag-premier",
         "name": "Очаг \"Premier\"",
         "category": "fire_pits",
-        "price": 349000,
+        "price": 244300,
         "unit": "шт",
         "dimensions": "D1500*500 (мм)",
         "image": "/images/4-3/ochag-premier.jpg"
@@ -396,7 +396,7 @@ export const products: Product[] = [
         "id": "ochag-abisso",
         "name": "Очаг \"Abisso\"",
         "category": "fire_pits",
-        "price": 349000,
+        "price": 244300,
         "unit": "шт",
         "dimensions": "D1500*400 (мм)",
         "image": "/images/4-3/ochag-abisso.jpg"
@@ -405,7 +405,7 @@ export const products: Product[] = [
         "id": "ochag-sfera-toskana",
         "name": "Очаг-сфера \"Тоскана\"",
         "category": "fire_pits",
-        "price": 119000,
+        "price": 83300,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
         "image": "/images/4-3/ochag-sfera-toskana.jpg"
@@ -414,7 +414,7 @@ export const products: Product[] = [
         "id": "ochag-sfera-zvezda-smerti",
         "name": "Очаг-сфера \"Звезда смерти\"",
         "category": "fire_pits",
-        "price": 119000,
+        "price": 83300,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
         "image": "/images/4-3/ochag-sfera-zvezda-smerti.jpg"
@@ -423,7 +423,7 @@ export const products: Product[] = [
         "id": "ochag-sfera-zhar-ptitsa",
         "name": "Очаг-сфера \"Жар-птица\"",
         "category": "fire_pits",
-        "price": 119000,
+        "price": 83300,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
         "image": "/images/4-3/ochag-sfera-zhar-ptitsa.jpg"
@@ -432,7 +432,7 @@ export const products: Product[] = [
         "id": "ochag-sfera-malen-kiy-prints",
         "name": "Очаг-сфера \"Маленький принц\"",
         "category": "fire_pits",
-        "price": 119000,
+        "price": 83300,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
         "image": "/images/4-3/ochag-sfera-malen-kiy-prints.jpg"
@@ -441,7 +441,7 @@ export const products: Product[] = [
         "id": "ochag-sfera-ezhik-v-tumane",
         "name": "Очаг-сфера \"Ежик в тумане\"",
         "category": "fire_pits",
-        "price": 119000,
+        "price": 83300,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
         "image": "/images/4-3/ochag-sfera-ezhik-v-tumane.jpg"
@@ -450,7 +450,7 @@ export const products: Product[] = [
         "id": "ochag-sfera-tsvetok",
         "name": "Очаг-сфера \"Цветок\"",
         "category": "fire_pits",
-        "price": 119000,
+        "price": 83300,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
         "image": "/images/4-3/ochag-sfera-tsvetok.jpg"
@@ -459,7 +459,7 @@ export const products: Product[] = [
         "id": "ochag-sfera-podvodnaya-mina",
         "name": "Очаг-сфера \"Подводная мина\"",
         "category": "fire_pits",
-        "price": 169000,
+        "price": 118300,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
         "image": "/images/4-3/ochag-sfera-podvodnaya-mina.jpg"
@@ -468,7 +468,7 @@ export const products: Product[] = [
         "id": "ochag-sfera-serpy",
         "name": "Очаг-сфера \"Серпы\"",
         "category": "fire_pits",
-        "price": 119000,
+        "price": 83300,
         "unit": "шт",
         "dimensions": "D950*1250 (мм)",
         "image": "/images/4-3/ochag-sfera-serpy.jpg"
@@ -477,7 +477,7 @@ export const products: Product[] = [
         "id": "ochag-cerchio",
         "name": "Очаг \"Cerchio\"",
         "category": "fire_pits",
-        "price": 189000,
+        "price": 132300,
         "unit": "шт",
         "dimensions": "D850*1150 (мм)",
         "image": "/images/4-3/ochag-cerchio.jpg"
@@ -486,7 +486,7 @@ export const products: Product[] = [
         "id": "ochag-minimo",
         "name": "Очаг \"Minimo\"",
         "category": "fire_pits",
-        "price": 149000,
+        "price": 104300,
         "unit": "шт",
         "dimensions": "D850*480 (мм)",
         "image": "/images/4-3/ochag-minimo.jpg"
@@ -495,7 +495,7 @@ export const products: Product[] = [
         "id": "ochag-fiore",
         "name": "Очаг \"Fiore\"",
         "category": "fire_pits",
-        "price": 89000,
+        "price": 62300,
         "unit": "шт",
         "dimensions": "D750*850 (мм)",
         "image": "/images/4-3/ochag-fiore.jpg"
@@ -504,7 +504,7 @@ export const products: Product[] = [
         "id": "ochag-convesso",
         "name": "Очаг \"Convesso\"",
         "category": "fire_pits",
-        "price": 109000,
+        "price": 76300,
         "unit": "шт",
         "dimensions": "D1100*520 (мм)",
         "image": "/images/4-3/ochag-convesso.jpg"
@@ -513,7 +513,7 @@ export const products: Product[] = [
         "id": "ochag-ottagono",
         "name": "Очаг \"Оttagono\"",
         "category": "fire_pits",
-        "price": 199000,
+        "price": 139300,
         "unit": "шт",
         "dimensions": "1600*1600*500 (мм)",
         "image": "/images/4-3/ochag-ottagono.jpg"
@@ -523,7 +523,7 @@ export const products: Product[] = [
         "id": "urn-shtof",
         "name": "Урна чугунная \"Штоф\"",
         "category": "urns",
-        "price": 25725,
+        "price": 36750,
         "unit": "шт",
         "dimensions": "Вес: 102 кг",
         "image": "/images/4-3/urn-shtof.jpg"
@@ -532,7 +532,7 @@ export const products: Product[] = [
         "id": "bench-rakushka",
         "name": "Скамейка чугунная \"Ракушка\"",
         "category": "benches",
-        "price": 51450,
+        "price": 73500,
         "unit": "шт",
         "dimensions": "Вес: 115 кг",
         "image": "/images/4-3/bench-rakushka.jpg"
@@ -541,7 +541,7 @@ export const products: Product[] = [
         "id": "bench-tyulpan",
         "name": "Скамейка чугунная \"Тюльпан\"",
         "category": "benches",
-        "price": 33075,
+        "price": 47250,
         "unit": "шт",
         "dimensions": "Вес: 45 кг",
         "image": "/images/4-3/bench-tyulpan.jpg"
@@ -550,7 +550,7 @@ export const products: Product[] = [
         "id": "pillar-stolby",
         "name": "Столбик парковочный",
         "category": "fences",
-        "price": 22050,
+        "price": 31500,
         "unit": "шт",
         "dimensions": "",
         "image": "/images/4-3/pillar-stolby.jpg"
@@ -559,7 +559,7 @@ export const products: Product[] = [
         "id": "fence-perila",
         "name": "Ограждение (Перила)",
         "category": "fences",
-        "price": 8400,
+        "price": 12000,
         "unit": "шт",
         "dimensions": "Ажурные / Круги",
         "image": "/images/4-3/fence-perila.jpg"
@@ -568,7 +568,7 @@ export const products: Product[] = [
         "id": "tile-demidovskaya",
         "name": "Плитка чугунная \"Демидовская\"",
         "category": "tiles",
-        "price": 8400,
+        "price": 12000,
         "unit": "шт",
         "dimensions": "500*500*8 (мм)",
         "image": "/images/4-3/tile-demidovskaya.jpg"
@@ -577,7 +577,7 @@ export const products: Product[] = [
         "id": "tile-suzdal",
         "name": "Плитка чугунная \"Суздаль\"",
         "category": "tiles",
-        "price": 7980,
+        "price": 11400,
         "unit": "шт",
         "dimensions": "500*500*10 (мм)",
         "image": "/images/4-3/tile-suzdal.jpg"
@@ -586,7 +586,7 @@ export const products: Product[] = [
         "id": "grate-buton",
         "name": "Решётка приствольная \"Бутон\"",
         "category": "grates",
-        "price": 14770,
+        "price": 21100,
         "unit": "шт",
         "dimensions": "1000х1000 мм",
         "image": "/images/4-3/grate-buton.jpg"
@@ -595,7 +595,7 @@ export const products: Product[] = [
         "id": "grate-meridian",
         "name": "Решётка приствольная \"Меридиан\"",
         "category": "grates",
-        "price": 22050,
+        "price": 31500,
         "unit": "шт",
         "dimensions": "1500х1500 мм",
         "image": "/images/4-3/grate-meridian.jpg"
@@ -604,7 +604,7 @@ export const products: Product[] = [
         "id": "grate-sirius",
         "name": "Решётка приствольная \"Сириус\"",
         "category": "grates",
-        "price": 27930,
+        "price": 39900,
         "unit": "шт",
         "dimensions": "1200х1200 мм",
         "image": "/images/4-3/grate-sirius.jpg"
@@ -613,7 +613,7 @@ export const products: Product[] = [
         "id": "kachel-iz-breven-doppietto",
         "name": "Качель из бревен \"Doppietto\"",
         "category": "swings",
-        "price": 149000,
+        "price": 104300,
         "unit": "шт",
         "dimensions": "4280*2600*3000 (мм)",
         "image": "/images/4-3/kachel-iz-breven-doppietto.jpg"
@@ -622,7 +622,7 @@ export const products: Product[] = [
         "id": "kachel-iz-breven-sezione",
         "name": "Качель из бревен \"Sezione\"",
         "category": "swings",
-        "price": 189000,
+        "price": 132300,
         "unit": "шт",
         "dimensions": "4885*2020*2380 (мм)",
         "image": "/images/4-3/kachel-iz-breven-sezione.jpg"
@@ -631,7 +631,7 @@ export const products: Product[] = [
         "id": "kachel-equilibrio",
         "name": "Качель \"Еquilibrio\"",
         "category": "swings",
-        "price": 79900,
+        "price": 55930,
         "unit": "шт",
         "dimensions": "4000*740*740",
         "image": "/images/4-3/kachel-equilibrio.jpg"
@@ -640,7 +640,7 @@ export const products: Product[] = [
         "id": "kachel-iz-breven-sella",
         "name": "Качель из бревен \"Sella\"",
         "category": "swings",
-        "price": 189000,
+        "price": 132300,
         "unit": "шт",
         "dimensions": "4885*2020*2380 (мм)",
         "image": "/images/4-3/kachel-iz-breven-sella.jpg"
@@ -649,7 +649,7 @@ export const products: Product[] = [
         "id": "kachel-iz-breven-rattuglia",
         "name": "Качель из бревен \"Рattuglia\"",
         "category": "swings",
-        "price": 119000,
+        "price": 83300,
         "unit": "шт",
         "dimensions": "3500*200*1760 (мм)",
         "image": "/images/4-3/kachel-iz-breven-rattuglia.jpg"
@@ -658,7 +658,7 @@ export const products: Product[] = [
         "id": "kachel-vrezza",
         "name": "Качель \"Вrezza\"",
         "category": "swings",
-        "price": 129000,
+        "price": 90300,
         "unit": "шт",
         "dimensions": "2500*850*2500 (мм)",
         "image": "/images/4-3/kachel-vrezza.jpg"
@@ -667,7 +667,7 @@ export const products: Product[] = [
         "id": "kachel-altare",
         "name": "Качель \"Аltare\"",
         "category": "swings",
-        "price": 119000,
+        "price": 83300,
         "unit": "шт",
         "dimensions": "1800*850*2500 (мм)",
         "image": "/images/4-3/kachel-altare.jpg"
