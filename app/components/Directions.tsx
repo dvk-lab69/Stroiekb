@@ -18,7 +18,7 @@ const directions = [
     {
         icon: Building2,
         title: "Для застройщиков",
-        description: "Фасадные решения для жилых комплексов: корзины для кондиционеров, вентиляционные решетки и декоративные экраны. Соответствие дизайн-коду.",
+        description: "Фасадные решения для жилых комплексов: корзины для кондиционеров, вентиляционные системы и решетки, декоративные экраны. Соответствие дизайн-коду.",
         links: [
             { href: "/solutions/baskets", label: "Корзины К/Б" },
             { href: "/solutions/ventilation", label: "Ламели" },
@@ -90,16 +90,7 @@ export default function Directions() {
                     ))}
                 </div>
 
-                {/* All Categories Link */}
-                <div className="text-center mt-12">
-                    <Link
-                        href="/catalog"
-                        className="inline-flex items-center gap-2 text-gray-600 hover:text-primary font-medium transition-colors"
-                    >
-                        <span>Все категории</span>
-                        <ArrowRight className="w-4 h-4" />
-                    </Link>
-                </div>
+
             </div>
         </section>
     );
