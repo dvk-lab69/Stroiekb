@@ -152,8 +152,8 @@ export default function RequestClient() {
                                     </div>
                                     <div>
                                         <div className="text-sm text-gray-500 mb-1">Email</div>
-                                        <a href="mailto:m4Rk@yandex.ru" className="text-lg font-semibold text-gray-900 hover:text-primary transition-colors">
-                                            m4Rk@yandex.ru
+                                        <a href="mailto:m4rk.kb@yandex.ru" className="text-lg font-semibold text-gray-900 hover:text-primary transition-colors">
+                                            m4rk.kb@yandex.ru
                                         </a>
                                         <div className="text-sm text-gray-500">Ответим в течение часа</div>
                                     </div>

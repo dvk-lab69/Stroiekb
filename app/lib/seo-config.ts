@@ -10,7 +10,7 @@ export const ORGANIZATION = {
     name: "ИП Кольберг Марк",
     alternateName: "StroiEkb",
     description: SITE_DESCRIPTION,
-    email: "m4Rk@yandex.ru",
+    email: "m4rk.kb@yandex.ru",
     telephone: ["+7 (912) 244-90-03", "+7 (912) 241-73-73", "+7 (912) 248-79-59"],
     address: {
         streetAddress: "ул. Тверитина, 34А",

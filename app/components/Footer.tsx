@@ -76,11 +76,11 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li>
                                 <a
-                                    href="mailto:m4Rk@yandex.ru"
+                                    href="mailto:m4rk.kb@yandex.ru"
                                     className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm"
                                 >
                                     <Mail className="w-4 h-4" />
-                                    m4Rk@yandex.ru
+                                    m4rk.kb@yandex.ru
                                 </a>
                             </li>
                             <li>
