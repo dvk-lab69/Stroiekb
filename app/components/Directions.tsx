@@ -9,7 +9,6 @@ const directions = [
         links: [
             { href: "/catalog", label: "Скамейки и урны" },
             { href: "/catalog", label: "Навесы и перголы" },
-            { href: "/catalog", label: "Качели" },
         ],
         color: "bg-emerald-500",
         accent: "text-emerald-600",

@@ -1,4 +1,4 @@
-export type CategoryType = "urns" | "benches" | "swings" | "fire_pits" | "lighting" | "fences" | "decor" | "other" | "tiles" | "grates";
+export type CategoryType = "urns" | "benches" | "fire_pits" | "lighting" | "fences" | "decor" | "other" | "tiles" | "grates";
 
 export interface Product {
     id: string;
@@ -51,10 +51,6 @@ export const categories = [
     {
         "id": "grates",
         "label": "Решётки"
-    },
-    {
-        "id": "swings",
-        "label": "Качели"
     }
 ];
 
@@ -556,15 +552,6 @@ export const products: Product[] = [
         "image": "/images/4-3/pillar-stolby.jpg"
     },
     {
-        "id": "fence-perila",
-        "name": "Ограждение (Перила)",
-        "category": "fences",
-        "price": 12000,
-        "unit": "шт",
-        "dimensions": "Ажурные / Круги",
-        "image": "/images/4-3/fence-perila.jpg"
-    },
-    {
         "id": "tile-demidovskaya",
         "name": "Плитка чугунная \"Демидовская\"",
         "category": "tiles",
@@ -608,68 +595,5 @@ export const products: Product[] = [
         "unit": "шт",
         "dimensions": "1200х1200 мм",
         "image": "/images/4-3/grate-sirius.jpg"
-    },
-    {
-        "id": "kachel-iz-breven-doppietto",
-        "name": "Качель из бревен \"Doppietto\"",
-        "category": "swings",
-        "price": 104300,
-        "unit": "шт",
-        "dimensions": "4280*2600*3000 (мм)",
-        "image": "/images/4-3/kachel-iz-breven-doppietto.jpg"
-    },
-    {
-        "id": "kachel-iz-breven-sezione",
-        "name": "Качель из бревен \"Sezione\"",
-        "category": "swings",
-        "price": 132300,
-        "unit": "шт",
-        "dimensions": "4885*2020*2380 (мм)",
-        "image": "/images/4-3/kachel-iz-breven-sezione.jpg"
-    },
-    {
-        "id": "kachel-equilibrio",
-        "name": "Качель \"Еquilibrio\"",
-        "category": "swings",
-        "price": 55930,
-        "unit": "шт",
-        "dimensions": "4000*740*740",
-        "image": "/images/4-3/kachel-equilibrio.jpg"
-    },
-    {
-        "id": "kachel-iz-breven-sella",
-        "name": "Качель из бревен \"Sella\"",
-        "category": "swings",
-        "price": 132300,
-        "unit": "шт",
-        "dimensions": "4885*2020*2380 (мм)",
-        "image": "/images/4-3/kachel-iz-breven-sella.jpg"
-    },
-    {
-        "id": "kachel-iz-breven-rattuglia",
-        "name": "Качель из бревен \"Рattuglia\"",
-        "category": "swings",
-        "price": 83300,
-        "unit": "шт",
-        "dimensions": "3500*200*1760 (мм)",
-        "image": "/images/4-3/kachel-iz-breven-rattuglia.jpg"
-    },
-    {
-        "id": "kachel-vrezza",
-        "name": "Качель \"Вrezza\"",
-        "category": "swings",
-        "price": 90300,
-        "unit": "шт",
-        "dimensions": "2500*850*2500 (мм)",
-        "image": "/images/4-3/kachel-vrezza.jpg"
-    },
-    {
-        "id": "kachel-altare",
-        "name": "Качель \"Аltare\"",
-        "category": "swings",
-        "price": 83300,
-        "unit": "шт",
-        "dimensions": "1800*850*2500 (мм)",
-        "image": "/images/4-3/kachel-altare.jpg"
     }
 ];
