@@ -301,10 +301,7 @@ export default function RequestClient() {
                                         </div>
                                         <div className="text-sm leading-5">
                                             <label htmlFor="privacy-consent" className="font-medium text-gray-600 cursor-pointer select-none">
-                                                Настоящим я соглашаюсь на условия обработки персональных данных в соответствии с{" "}
-                                                <Link href="/privacy" className="text-primary hover:underline hover:text-primary/80 transition-colors">
-                                                    политикой конфиденциальности
-                                                </Link>
+                                                Настоящим я даю <Link href="/consent" className="text-primary hover:underline hover:text-primary/80 transition-colors">согласие на обработку персональных данных</Link> в соответствии с <Link href="/privacy" className="text-primary hover:underline hover:text-primary/80 transition-colors">политикой конфиденциальности</Link>
                                             </label>
                                         </div>
                                     </div>
