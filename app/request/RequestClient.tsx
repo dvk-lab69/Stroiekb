@@ -11,6 +11,7 @@ export default function RequestClient() {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [agreed, setAgreed] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const formRef = useRef<HTMLFormElement>(null);
@@ -65,6 +66,11 @@ export default function RequestClient() {
         // Basic Client Validation
         if (!name || !phone || !email) {
             alert("Пожалуйста, заполните имя, телефон и email");
+            throw new Error("Validation failed");
+        }
+
+        if (!agreed) {
+            alert("Необходимо дать согласие на обработку персональных данных");
             throw new Error("Validation failed");
         }
 
@@ -282,11 +288,32 @@ export default function RequestClient() {
                                         />
                                     </div>
 
+                                    <div className="flex items-start gap-3 mb-6">
+                                        <div className="flex items-center h-5">
+                                            <input
+                                                id="privacy-consent"
+                                                name="privacy-consent"
+                                                type="checkbox"
+                                                checked={agreed}
+                                                onChange={(e) => setAgreed(e.target.checked)}
+                                                className="h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary focus:ring-offset-2 cursor-pointer"
+                                            />
+                                        </div>
+                                        <div className="text-sm leading-5">
+                                            <label htmlFor="privacy-consent" className="font-medium text-gray-600 cursor-pointer select-none">
+                                                Настоящим я соглашаюсь на условия обработки персональных данных в соответствии с{" "}
+                                                <Link href="/privacy" className="text-primary hover:underline hover:text-primary/80 transition-colors">
+                                                    политикой конфиденциальности
+                                                </Link>
+                                            </label>
+                                        </div>
+                                    </div>
+
                                     <div>
                                         <button
                                             type="submit"
-                                            disabled={isSubmitting || isSuccess}
-                                            className={`w-full font-medium rounded-lg px-6 py-4 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 ${isSuccess
+                                            disabled={isSubmitting || isSuccess || !agreed}
+                                            className={`w-full font-medium rounded-lg px-6 py-4 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 ${isSuccess
                                                 ? "bg-green-500 hover:bg-green-600 text-white"
                                                 : "bg-primary hover:bg-primary/90 text-white"
                                                 }`}
@@ -309,12 +336,6 @@ export default function RequestClient() {
                                                 </>
                                             )}
                                         </button>
-                                        <p className="text-xs text-gray-400 mt-4 text-center">
-                                            Нажимая кнопку, вы соглашаетесь с{" "}
-                                            <Link href="/privacy" className="underline hover:text-gray-600">
-                                                политикой обработки персональных данных
-                                            </Link>
-                                        </p>
                                     </div>
                                 </form>
                             </div>
