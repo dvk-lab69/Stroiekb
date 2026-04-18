@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Trees, Building2 } from "lucide-react";
 import { motion } from "framer-motion";
