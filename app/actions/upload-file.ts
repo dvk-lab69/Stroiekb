@@ -69,8 +69,9 @@ export async function uploadFile(formData: FormData): Promise<{ success: boolean
             .getPublicUrl(filePath);
 
         return { success: true, url: publicUrl };
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.error("Upload exception:", error);
-        return { success: false, error: error.message || "Ошибка при загрузке файла" };
+        const errorMessage = error instanceof Error ? error.message : "Ошибка при загрузке файла";
+        return { success: false, error: errorMessage };
     }
 }

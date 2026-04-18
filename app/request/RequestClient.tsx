@@ -79,6 +79,7 @@ export default function RequestClient() {
         formData.set("phone", phone);
 
         try {
+            setIsSubmitting(true);
             const result = await submitApplication(formData);
 
             if (!result.success) {
@@ -99,6 +100,8 @@ export default function RequestClient() {
         } catch (error) {
             console.error("Submission error:", error);
             throw error; // Re-throw to stop button success animation
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -144,9 +147,6 @@ export default function RequestClient() {
                                             </a>
                                             <a href="tel:+79122417373" className="text-lg font-semibold text-gray-900 hover:text-primary transition-colors">
                                                 +7 (912) 241-73-73
-                                            </a>
-                                            <a href="tel:+79122487959" className="text-lg font-semibold text-gray-900 hover:text-primary transition-colors">
-                                                +7 (912) 248-79-59
                                             </a>
                                         </div>
                                     </div>

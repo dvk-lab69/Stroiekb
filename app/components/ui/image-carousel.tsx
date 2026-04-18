@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface CarouselItem {
@@ -142,11 +143,12 @@ const ImageCarousel = ({ data, cardsPerView = 3 }: ImageCarouselProps) => {
                                 }}
                                 className="px-2"
                             >
-                                <div className="overflow-hidden rounded-2xl shadow-md h-72">
-                                    <img
+                                <div className="overflow-hidden rounded-2xl shadow-md h-72 relative">
+                                    <Image
                                         src={card.imgUrl}
                                         alt={card.alt || `Изображение ${card.id}`}
-                                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                                        fill
+                                        className="object-cover transition-transform duration-300 hover:scale-105"
                                     />
                                 </div>
                             </div>

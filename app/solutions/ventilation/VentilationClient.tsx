@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Wind, Thermometer, Shield, Palette, Volume2, Droplets, Check, Download, ChevronLeft, LayoutGrid } from "lucide-react";
+import { ArrowRight, Wind, Thermometer, Shield, Palette, Volume2, Droplets, Check, ChevronLeft, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { ventilationCatalog, Category, SubCategory, Product } from "./data";
+import { ventilationCatalog, SubCategory } from "./data";
 import { cn } from "@/lib/utils";
 
 const features = [

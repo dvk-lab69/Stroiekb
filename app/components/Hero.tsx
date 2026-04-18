@@ -1,15 +1,18 @@
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     src="/images/hero-bg.png"
-                    alt="Background"
-                    className="w-full h-full object-cover opacity-20"
+                    alt="Благоустройство города и фасадные решения из металла"
+                    fill
+                    priority
+                    className="object-cover opacity-20"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
             </div>

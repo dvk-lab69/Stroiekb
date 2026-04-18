@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { ArrowRight, Trees, Building2 } from "lucide-react";
+import Image from "next/image";
+import { Trees, Building2 } from "lucide-react";
 
 const directions = [
     {
@@ -51,10 +51,11 @@ export default function Directions() {
                         >
                             {/* Background Image */}
                             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-[-1]">
-                                <img
+                                <Image
                                     src={index === 0 ? "/images/direction-city.png" : "/images/direction-developer.png"}
                                     alt=""
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                                 <div className="absolute inset-0 bg-black/60" />
                             </div>

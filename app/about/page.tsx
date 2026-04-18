@@ -1,5 +1,5 @@
-import { Factory, Award, Truck, Paintbrush, Building2, BadgeCheck, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Factory, Truck, Paintbrush, Building2, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const productionSteps = [
     {
@@ -26,13 +26,6 @@ const productionSteps = [
         title: "Логистика",
         description: "Доставка по всей России.",
     },
-];
-
-const certificates = [
-    "ISO 9001:2015",
-    "ГОСТ Р ИСО 9001",
-    "Сертификат соответствия ТР ТС",
-    "Гарантия 5 лет",
 ];
 
 
@@ -84,10 +77,11 @@ export default function AboutPage() {
                         </div>
                         <div className="bg-primary rounded-3xl relative overflow-hidden h-full min-h-[400px] shadow-lg flex items-center justify-center text-center p-8">
                             <div className="absolute inset-0 opacity-20">
-                                <img
+                                <Image
                                     src="/images/factory-interior.png"
                                     alt="Производство"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-cover"
                                 />
                             </div>
                             <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />

@@ -85,6 +85,7 @@ export const Button = ({ className, children, ...props }: ButtonProps) => {
         }
     };
 
+    /* eslint-disable @typescript-eslint/no-unused-vars */
     const {
         onClick,
         onDrag,
@@ -94,6 +95,7 @@ export const Button = ({ className, children, ...props }: ButtonProps) => {
         onAnimationEnd,
         ...buttonProps
     } = props;
+    /* eslint-enable @typescript-eslint/no-unused-vars */
 
     return (
         <motion.button

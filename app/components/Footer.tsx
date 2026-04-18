@@ -98,12 +98,6 @@ export default function Footer() {
                                     >
                                         +7 (912) 241-73-73
                                     </a>
-                                    <a
-                                        href="tel:+79122487959"
-                                        className="flex items-center gap-3 text-white/80 hover:text-white transition-colors text-sm pl-7"
-                                    >
-                                        +7 (912) 248-79-59
-                                    </a>
                                 </div>
                             </li>
                             <li>

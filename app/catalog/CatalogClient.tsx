@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
-import { ArrowRight, SlidersHorizontal, Search } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 import { products, categories } from "../data/catalog";
 
 export default function CatalogClient() {

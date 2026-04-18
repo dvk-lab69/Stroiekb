@@ -70,7 +70,7 @@ export default function ContactsClient() {
     return (
         <>
             {/* FAQ Schema.org markup */}
-            <SchemaOrg type="faq" faqItems={allFaqItems} />
+            <SchemaOrg faqItems={allFaqItems} />
 
             <div className="pt-20">
                 {/* Header */}

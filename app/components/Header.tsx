@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ArrowRight } from "lucide-react";
 
 const navLinks = [
@@ -21,10 +22,12 @@ export default function Header() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <img
+                        <Image
                             src="/logo-icon.png"
                             alt="Urban Furniture"
-                            className="w-10 h-10 rounded-lg object-cover"
+                            width={40}
+                            height={40}
+                            className="rounded-lg object-cover"
                         />
                         <span className="text-xl font-bold text-gray-900">
                             Stroi<span className="text-primary">Ekb</span>

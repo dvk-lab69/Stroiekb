@@ -1,11 +1,28 @@
 import { BASE_URL, ORGANIZATION, SITE_NAME } from "../lib/seo-config";
 
-interface SchemaOrgProps {
-    type?: "website" | "organization" | "faq";
-    faqItems?: { question: string; answer: string }[];
+export interface BreadcrumbItem {
+    name: string;
+    item: string;
 }
 
-export default function SchemaOrg({ type = "website", faqItems }: SchemaOrgProps) {
+export interface ProductSchemaProps {
+    name: string;
+    image: string;
+    description: string;
+    price: number | string;
+    currency?: string;
+    sku?: string;
+}
+
+export interface SchemaOrgProps {
+    faqItems?: { question: string; answer: string }[];
+    breadcrumbs?: BreadcrumbItem[];
+    product?: ProductSchemaProps;
+}
+
+export default function SchemaOrg({ faqItems, breadcrumbs, product }: SchemaOrgProps) {
+    const schemas: Record<string, unknown>[] = [];
+
     const organizationSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -40,7 +57,9 @@ export default function SchemaOrg({ type = "website", faqItems }: SchemaOrgProps
         },
     };
 
-    const faqSchema = faqItems
+    schemas.push(organizationSchema, websiteSchema);
+
+    const faqSchema = faqItems && faqItems.length > 0
         ? {
             "@context": "https://schema.org",
             "@type": "FAQPage",
@@ -55,10 +74,47 @@ export default function SchemaOrg({ type = "website", faqItems }: SchemaOrgProps
         }
         : null;
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const schemas: any[] = [organizationSchema, websiteSchema];
     if (faqSchema) {
         schemas.push(faqSchema);
+    }
+
+    if (breadcrumbs && breadcrumbs.length > 0) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: breadcrumbs.map((item, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                name: item.name,
+                item: `${BASE_URL}${item.item}`,
+            })),
+        });
+    }
+
+    if (product) {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: product.name,
+            image: product.image.startsWith("http") ? product.image : `${BASE_URL}${product.image}`,
+            description: product.description,
+            sku: product.sku,
+            brand: {
+                "@type": "Brand",
+                name: SITE_NAME,
+            },
+            offers: {
+                "@type": "Offer",
+                url: BASE_URL,
+                priceCurrency: product.currency || "RUB",
+                price: product.price,
+                availability: "https://schema.org/InStock",
+                seller: {
+                    "@type": "Organization",
+                    name: ORGANIZATION.name,
+                },
+            },
+        });
     }
 
     return (

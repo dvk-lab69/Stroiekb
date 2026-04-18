@@ -1,5 +1,6 @@
-import { ArrowRight, Shield, Thermometer, Ruler, Palette, BadgeCheck } from "lucide-react";
+import { ArrowRight, Shield, Thermometer, Ruler, Palette } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import ImageCarousel from "@/app/components/ui/image-carousel";
 
 const features = [
@@ -81,10 +82,11 @@ export default function BasketsPage() {
 
                         {/* Image Placeholder */}
                         <div className="aspect-square bg-white rounded-3xl flex items-center justify-center p-8 relative overflow-hidden">
-                            <img
+                            <Image
                                 src="/images/products/basket-1.png"
                                 alt="Корзина для кондиционера"
-                                className="w-full h-full object-contain relative z-10"
+                                fill
+                                className="object-contain relative z-10"
                             />
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 z-0" />
                         </div>

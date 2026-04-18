@@ -11,7 +11,7 @@ export const ORGANIZATION = {
     alternateName: "StroiEkb",
     description: SITE_DESCRIPTION,
     email: "m4rk.kb@yandex.ru",
-    telephone: ["+7 (912) 244-90-03", "+7 (912) 241-73-73", "+7 (912) 248-79-59"],
+    telephone: ["+7 (912) 244-90-03", "+7 (912) 241-73-73"],
     address: {
         streetAddress: "ул. Тверитина, 34А",
         addressLocality: "Екатеринбург",
