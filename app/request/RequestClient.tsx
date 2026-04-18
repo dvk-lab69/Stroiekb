@@ -5,6 +5,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
 import { submitApplication } from "@/app/actions/submit-application";
 import { Loader2 } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function RequestClient() {
     const [phone, setPhone] = useState("");
@@ -111,15 +112,29 @@ export default function RequestClient() {
             <section className="section bg-transparent pb-8">
                 <div className="container-custom">
                     <div className="max-w-3xl">
-                        <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
+                        <motion.span 
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block"
+                        >
                             Заявка
-                        </span>
-                        <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        </motion.span>
+                        <motion.h1 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+                        >
                             Оставить <span className="gradient-text">заявку</span>
-                        </h1>
-                        <p className="text-xl text-gray-600">
+                        </motion.h1>
+                        <motion.p 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                            className="text-xl text-gray-600"
+                        >
                             Ответим на ваши вопросы и подготовим коммерческое предложение в течение часа.
-                        </p>
+                        </motion.p>
                     </div>
                 </div>
             </section>
@@ -129,7 +144,12 @@ export default function RequestClient() {
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Contact Info */}
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                        >
                             <h2 className="text-2xl font-bold text-gray-900 mb-8">
                                 Контактная информация
                             </h2>
@@ -191,15 +211,20 @@ export default function RequestClient() {
                                 ></iframe>
                                 <div className="absolute inset-0 pointer-events-none group-hover:bg-transparent transition-colors" />
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Form */}
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                        >
                             <h2 className="text-2xl font-bold text-gray-900 mb-8">
                                 Заполните форму
                             </h2>
 
-                            <div className="bg-gray-50 rounded-3xl p-8 lg:p-10">
+                            <div className="bg-gray-50 rounded-3xl p-8 lg:p-10 border border-gray-100 shadow-sm transition-shadow hover:shadow-md">
                                 <form
                                     ref={formRef}
                                     className="space-y-5"
@@ -300,8 +325,8 @@ export default function RequestClient() {
                                             />
                                         </div>
                                         <div className="text-sm leading-5">
-                                            <label htmlFor="privacy-consent" className="font-medium text-gray-600 cursor-pointer select-none">
-                                                Настоящим я даю <Link href="/consent" className="text-primary hover:underline hover:text-primary/80 transition-colors">согласие на обработку персональных данных</Link> в соответствии с <Link href="/privacy" className="text-primary hover:underline hover:text-primary/80 transition-colors">политикой конфиденциальности</Link>
+                                            <label htmlFor="privacy-consent" className="font-medium text-gray-600 cursor-pointer select-none text-balance">
+                                                Настоящим я дау <Link href="/consent" className="text-primary hover:underline hover:text-primary/80 transition-colors">согласие на обработку персональных данных</Link> в соответствии с <Link href="/privacy" className="text-primary hover:underline hover:text-primary/80 transition-colors">политикой конфиденциальности</Link>
                                             </label>
                                         </div>
                                     </div>
@@ -310,9 +335,9 @@ export default function RequestClient() {
                                         <button
                                             type="submit"
                                             disabled={isSubmitting || isSuccess || !agreed}
-                                            className={`w-full font-medium rounded-lg px-6 py-4 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 ${isSuccess
-                                                ? "bg-green-500 hover:bg-green-600 text-white"
-                                                : "bg-primary hover:bg-primary/90 text-white"
+                                            className={`w-full font-bold rounded-xl px-6 py-4 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg ${isSuccess
+                                                ? "bg-emerald-500 hover:bg-emerald-600 text-white shadow-emerald-200"
+                                                : "bg-primary hover:bg-primary/90 text-white shadow-primary/25"
                                                 }`}
                                             onClick={handleSubmit}
                                         >
@@ -336,7 +361,7 @@ export default function RequestClient() {
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>

@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
@@ -25,35 +26,57 @@ export default function Hero() {
             <div className="container-custom relative z-10">
                 <div className="max-w-4xl">
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8"
+                    >
                         <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                         Комплексные решения для благоустройства
-                    </div>
+                    </motion.div>
 
                     {/* Title */}
-                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6">
+                    <motion.h1 
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                        className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6"
+                    >
                         Благоустройство города{" "}
                         <span className="gradient-text">и решения для фасадов</span>
-                    </h1>
+                    </motion.h1>
 
                     {/* Subtitle */}
-                    <p className="text-xl text-gray-600 max-w-2xl mb-10 leading-relaxed">
+                    <motion.p 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        className="text-xl text-gray-600 max-w-2xl mb-10 leading-relaxed"
+                    >
                         Мы создаем современную городскую среду, объединяя функциональность,
                         эстетику и долговечность в каждом проекте.
-                    </p>
+                    </motion.p>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <Link href="/request" className="btn-primary">
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        className="flex flex-col sm:flex-row gap-4"
+                    >
+                        <Link href="/request" className="btn-primary group">
                             <span>Получить расчет</span>
-                            <ArrowRight className="w-5 h-5" />
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <Link href="/catalog" className="btn-secondary">
                             <span>Смотреть каталог</span>
                         </Link>
-                    </div>
-
-
+                    </motion.div>
                 </div>
             </div>
 

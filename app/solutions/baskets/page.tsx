@@ -1,7 +1,10 @@
+"use client";
+
 import { ArrowRight, Shield, Thermometer, Ruler, Palette } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import ImageCarousel from "@/app/components/ui/image-carousel";
+import { motion } from "framer-motion";
 
 const features = [
     {
@@ -58,7 +61,11 @@ export default function BasketsPage() {
             <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
                                 Фасадные решения
                             </span>
@@ -78,10 +85,15 @@ export default function BasketsPage() {
                                     <span>Примеры работ</span>
                                 </a>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        {/* Image Placeholder */}
-                        <div className="aspect-square bg-white rounded-3xl flex items-center justify-center p-8 relative overflow-hidden">
+                        {/* Image */}
+                        <motion.div 
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8 }}
+                            className="aspect-square bg-white rounded-3xl flex items-center justify-center p-8 relative overflow-hidden"
+                        >
                             <Image
                                 src="/images/products/basket-1.png"
                                 alt="Корзина для кондиционера"
@@ -89,7 +101,7 @@ export default function BasketsPage() {
                                 className="object-contain relative z-10"
                             />
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 z-0" />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -108,8 +120,12 @@ export default function BasketsPage() {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {features.map((feature, index) => (
-                            <div
+                            <motion.div
                                 key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="text-center group"
                             >
                                 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-all">
@@ -121,7 +137,7 @@ export default function BasketsPage() {
                                 <p className="text-gray-600 text-sm">
                                     {feature.description}
                                 </p>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

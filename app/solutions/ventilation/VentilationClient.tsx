@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowRight, Wind, Thermometer, Shield, Palette, Volume2, Droplets, Check, ChevronLeft, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import { ventilationCatalog, SubCategory } from "./data";
 import { cn } from "@/lib/utils";
 
@@ -58,7 +59,11 @@ export default function VentilationClient() {
             <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
                                 Профессиональные решения
                             </span>
@@ -75,10 +80,15 @@ export default function VentilationClient() {
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Hero Image */}
-                        <div className="aspect-square bg-gray-100 rounded-3xl overflow-hidden relative shadow-lg shadow-gray-200/50">
+                        <motion.div 
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.8 }}
+                            className="aspect-square bg-gray-100 rounded-3xl overflow-hidden relative shadow-lg shadow-gray-200/50"
+                        >
                             <Image
                                 src="/images/ventilation-hero-user.jpg"
                                 alt="Промышленная вентиляция"
@@ -86,7 +96,7 @@ export default function VentilationClient() {
                                 className="object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -105,9 +115,13 @@ export default function VentilationClient() {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {features.map((feature, index) => (
-                            <div
+                            <motion.div
                                 key={index}
-                                className="flex gap-4 p-6 bg-transparent rounded-2xl hover:bg-gray-50 transition-all"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="flex gap-4 p-6 bg-transparent rounded-2xl hover:bg-gray-50 transition-all border border-transparent hover:border-gray-100 shadow-sm hover:shadow-md"
                             >
                                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                                     <feature.icon className="w-6 h-6 text-primary" />
@@ -120,7 +134,7 @@ export default function VentilationClient() {
                                         {feature.description}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin, Building2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const productLinks = [
     { href: "/catalog", label: "Для парков и скверов" },
@@ -15,11 +16,15 @@ const companyLinks = [
 
 export default function Footer() {
     return (
-        <footer className="bg-[#594a45] text-white">
-
-
+        <footer className="bg-[#594a45] text-white overflow-hidden">
             {/* Main Footer */}
-            <div className="container-custom !pt-14 !pb-8 px-4 sm:px-0">
+            <motion.div 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="container-custom !pt-14 !pb-8 px-4 sm:px-0"
+            >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div>
@@ -121,7 +126,7 @@ export default function Footer() {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </footer>
     );
 }

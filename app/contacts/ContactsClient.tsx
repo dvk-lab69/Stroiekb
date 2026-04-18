@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Plus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import SchemaOrg from "../components/SchemaOrg";
 
 const faqItems = [
@@ -77,15 +78,29 @@ export default function ContactsClient() {
                 <section className="section bg-transparent pb-8">
                     <div className="container-custom">
                         <div className="max-w-3xl">
-                            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
-                                FAQ
-                            </span>
-                            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                            <motion.span 
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block"
+                            >
+                                Вопросы и ответы
+                            </motion.span>
+                            <motion.h1 
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.1 }}
+                                className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+                            >
                                 Частые <span className="gradient-text">вопросы</span>
-                            </h1>
-                            <p className="text-xl text-gray-600">
+                            </motion.h1>
+                            <motion.p 
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="text-xl text-gray-600"
+                            >
                                 Все, что вы хотели знать о производстве, доставке и сотрудничестве с StroiEkb.
-                            </p>
+                            </motion.p>
                         </div>
                     </div>
                 </section>
@@ -95,7 +110,13 @@ export default function ContactsClient() {
                     <div className="container-custom">
                         <div className="grid lg:grid-cols-12 gap-12">
                             {/* Sidebar Categories */}
-                            <div className="lg:col-span-4">
+                            <motion.div 
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.3 }}
+                                className="lg:col-span-4"
+                            >
                                 <div className="bg-gray-50 rounded-2xl p-6 sticky top-24">
                                     <h2 className="font-bold text-gray-900 mb-4">Категории</h2>
                                     <div className="space-y-2">
@@ -116,7 +137,7 @@ export default function ContactsClient() {
                                         ))}
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
 
                             {/* FAQ List */}
                             <div className="lg:col-span-8">

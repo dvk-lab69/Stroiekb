@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -24,6 +24,7 @@
   --color-card-border: var(--card-border);
   --color-muted: var(--muted);
   --font-inter: "Inter", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
 }
 
 html {
@@ -33,8 +34,14 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter);
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 /* Card with subtle shadow */

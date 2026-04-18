@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Trees, Building2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const directions = [
     {
@@ -35,19 +36,28 @@ export default function Directions() {
             <div className="container-custom">
                 {/* Section Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                    >
                         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
                             Наши направления
                         </h2>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Cards Grid */}
                 <div className="grid md:grid-cols-2 gap-8">
                     {directions.map((direction, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className={`${direction.bgLight} relative overflow-hidden rounded-2xl p-8 lg:p-10 group hover:shadow-xl transition-all duration-300 isolate`}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: index * 0.2 }}
+                            className={`${direction.bgLight} relative overflow-hidden rounded-2xl p-8 lg:p-10 group hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 isolate`}
                         >
                             {/* Background Image */}
                             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-[-1]">
@@ -80,7 +90,7 @@ export default function Directions() {
 
                             {/* CTA */}
 
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 

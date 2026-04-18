@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -10,7 +10,13 @@ import { BASE_URL, SITE_NAME, SITE_DESCRIPTION } from "./lib/seo-config";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin", "cyrillic"],
-  display: "swap", // Optimize font loading for Core Web Vitals
+  display: "swap",
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
 });
 
 // Enhanced metadata for SEO
@@ -43,6 +49,7 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "ru_RU",
@@ -84,7 +91,7 @@ export default function RootLayout({
       <head>
         <SchemaOrg />
       </head>
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} ${manrope.variable} antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />
