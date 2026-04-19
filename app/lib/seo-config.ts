@@ -1,6 +1,6 @@
 // Global SEO configuration
 // Change this URL when deploying to production domain
-export const BASE_URL = "https://stroiekb.tu";
+export const BASE_URL = "https://stroiekb.ru";
 
 export const SITE_NAME = "StroiEkb";
 export const SITE_DESCRIPTION = "Производственная компания полного цикла. Малые архитектурные формы, парковая мебель, корзины для кондиционеров, вентиляционные решетки.";
